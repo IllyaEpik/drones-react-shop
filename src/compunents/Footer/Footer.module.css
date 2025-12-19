@@ -1,0 +1,47 @@
+.footer {
+  background-color: #d8dde3;
+  padding: 80px 0 40px;
+  text-align: center;
+  position: relative;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-bottom: 80px;
+}
+
+.stats h3 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.stats p {
+  font-size: 14px;
+}
+
+.bgText {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 180px;
+  font-weight: 700;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  list-style: none;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.copy {
+  font-size: 12px;
+  opacity: 0.6;
+}
