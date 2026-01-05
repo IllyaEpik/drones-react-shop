@@ -8,7 +8,7 @@ const Home = () => {
         ТЕХНОЛОГІЇ <br /> ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ
       </h1>
 
-      <img src={droneImg} alt="Drone" />
+      <img src={droneImg} alt="Drone" className={styles.droneImage} />
 
       <div className={styles.textBlock}>
         <p>

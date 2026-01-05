@@ -1,0 +1,67 @@
+.header {
+width: 1360;
+height: 64;
+top: 119px;
+left: 40px;
+border-radius: 62px;
+border-width: 1px;
+justify-content: space-between;
+padding-top: 10px;
+padding-right: 40px;
+padding-bottom: 10px;
+padding-left: 40px;
+background-color: #E4E4E7;
+opacity: 1;
+
+
+
+}
+
+.container {
+  width: 1360px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+width: 65.00000140292829;
+height: 17.000000366919707;
+opacity: 1;
+gap: 32px;
+
+
+}
+
+.logo {
+width: 108;
+height: 21;
+opacity: 1;
+
+}
+
+.actions {
+  display: flex;
+width: 261;
+height: 44;
+gap: 24px;
+
+opacity: 1;
+
+}
+.Icons{
+  width: 24;
+height: 24;
+
+opacity: 1;
+
+}
+.menuItem {
+width: 65.00000140292829;
+height: 17.000000366919707;
+rotate: 0.06;
+opacity: 1;
+
+}
