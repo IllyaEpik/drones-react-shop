@@ -6,7 +6,7 @@ import teamImg from "../../assets/people.png";
 const About = () => {
   return (
     <>
-      {/* CONTENT */}
+      
       <section className={styles.section}>
         <div className={styles.container}>
           <h1 className={styles.title}>ПРО НАС</h1>
