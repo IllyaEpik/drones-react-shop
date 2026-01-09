@@ -40,16 +40,16 @@
   border-radius: 16px;
 }
 
-.reverse {
+/* .reverse {
   flex-direction: row-reverse;
-}
+} */
 
-
+/* 
 .statsSection {
   background: #d9dfe5;
   padding-top: 80px;
   border-radius: 120px 120px 0 0;
-}
+} */
 
 .stats {
   display: flex;

@@ -8,17 +8,17 @@ const Header: React.FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <ul className={styles.menu}>
-          <li className={styles.menuItem}>Каталог</li>
+        <nav className={styles.menu}>
+          <span className={styles.menuItem}>КАТАЛОГ</span>
 
-          <li className={styles.menuItem}>
+          <span className={styles.menuItem}>
             <Link to="/about" className={styles.link}>
-              Про нас
+              ПРО НАС
             </Link>
-          </li>
+          </span>
 
-          <li className={styles.menuItem}>Контакти</li>
-        </ul>
+          <span className={styles.menuItem}>КОНТАКТИ</span>
+        </nav>
 
         <div className={styles.actions}>
           <img src={Basket} alt="" className={styles.Icons} />
