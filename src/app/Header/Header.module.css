@@ -65,3 +65,7 @@ rotate: 0.06;
 opacity: 1;
 
 }
+.link {
+  text-decoration: none;
+  color: inherit;
+}
