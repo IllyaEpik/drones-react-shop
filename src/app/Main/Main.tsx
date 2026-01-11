@@ -7,18 +7,38 @@ import { IProbs } from './maInTypes'
 
 export function Main(probs:IProbs) {
     const children = probs.children
+    const headerType = probs.header
     return (
         <main>
-            <div className={`${styles.oval} ${styles.topOval}`}>
+            {
+                headerType == 1 && 
+                <div className={`${styles.oval} ${styles.topOval}`}/>
 
-            </div>
+            
+            }
+            
             <div className={styles.main}>
             {children}
-
             </div>
-            <div className={styles.oval}>
 
-            </div>
+            {/* <section className={styles.statsSection}> */}
+                <div className={styles.oval}>
+                    <div className={styles.stats}>
+                        <div className={styles.stat}>
+                            <strong>1K+</strong>
+                            <span>Успішних проєктів</span>
+                        </div>
+                        <div className={styles.stat}>
+                            <strong>1.5K+</strong>
+                            <span>Задоволених клієнтів</span>
+                        </div>
+                        <div className={styles.stat}>
+                            <strong>24/7</strong>
+                            <span>Підтримка</span>
+                        </div>
+                    </div>
+                </div>
+        {/* </section> */}
         </main>
     )
 }

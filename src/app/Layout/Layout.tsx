@@ -8,8 +8,8 @@ export function Layout() {
   // const bottomChildren = probs.bottomChildren
   return (
     <>
-      <Header />
-      <Main>
+      <Header typeOfHeader={1}/>
+      <Main header={0} footer={1}>
          <Outlet></Outlet>
       </Main>
       <Footer/>

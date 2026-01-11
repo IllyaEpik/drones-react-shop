@@ -44,7 +44,7 @@ const About = () => {
       </section>
 
       
-      <section className={styles.statsSection}>
+      {/* <section className={styles.statsSection}>
         <div className={styles.container}>
           <div className={styles.stats}>
             <div>
@@ -61,7 +61,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

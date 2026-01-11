@@ -7,7 +7,7 @@
     /* top: 530px; */
     border-bottom-left-radius: 50% 250px;
     border-bottom-right-radius: 50% 250px;
-    background: #e6ebef;
+    background: white;
     overflow-x: hidden;
     z-index: 1;
 }
@@ -20,5 +20,26 @@
 .main{
     /* overflow-x: hidden; */
     /* z-index: 90; */
-    background: #e6ebef;
+    background: white;
+}
+.stats {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 87px;
+  text-align: center;
+  /* margin: 50px 200px; */
+}
+.stat{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+}
+.stats strong {
+  font-size: 32px;
+  display: block;
+}
+
+.stats span {
+  color: rgba(12, 18, 42, 1);
 }
