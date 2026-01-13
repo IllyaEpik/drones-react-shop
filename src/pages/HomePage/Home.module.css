@@ -1,6 +1,6 @@
 .hero {
   min-height: 80vh;
-  background: #e6ebef;
+  /* background: #e6ebef; */
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -43,25 +43,6 @@ const About = () => {
         </div>
       </section>
 
-      
-      {/* <section className={styles.statsSection}>
-        <div className={styles.container}>
-          <div className={styles.stats}>
-            <div>
-              <strong>1K+</strong>
-              <span>Успішних проєктів</span>
-            </div>
-            <div>
-              <strong>1.5K+</strong>
-              <span>Задоволених клієнтів</span>
-            </div>
-            <div>
-              <strong>24/7</strong>
-              <span>Підтримка</span>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   );
 };

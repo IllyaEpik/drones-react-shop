@@ -8,12 +8,13 @@ const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
+        <Route element={<Layout typeOfFooter={0} typeOfHeader={0} />}>
           <Route path="/about" element={<About />} />
+        </Route>
+        <Route element={<Layout typeOfFooter={1} typeOfHeader={1}/>}>
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
         </Route>
-        
       </Routes>
     </BrowserRouter>
   );

@@ -8,7 +8,7 @@ import { SVG } from "../../shared/SVG";
 export function Header(probs:IProbs){
 	const typeOfHeader = probs.typeOfHeader
   	return (
-		<div className={`${styles.headerContainer} ${typeOfHeader == 1 && styles.whiteHeaderContainer}`}>
+		<div className={`${styles.headerContainer} ${(typeOfHeader != 1 && styles.whiteHeaderContainer)}`}>
 			<header 
 	
 			className={styles.header}

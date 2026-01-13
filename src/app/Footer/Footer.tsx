@@ -7,7 +7,6 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       
 		
-      {/* <div className={styles.bgText}>DRONES</div> */}
 	  <SVG.footerDrones/>
       <ul className={styles.menu}>
         <li>Каталог</li>

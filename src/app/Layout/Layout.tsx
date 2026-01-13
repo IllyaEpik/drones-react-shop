@@ -4,12 +4,13 @@ import { Footer } from "../Footer";
 import { Main } from "../Main";
 import { IProbs } from "./layoutTypes";
 
-export function Layout() {
+export function Layout(probs:IProbs) {
   // const bottomChildren = probs.bottomChildren
+  const {typeOfHeader, typeOfFooter} = probs
   return (
     <>
-      <Header typeOfHeader={1}/>
-      <Main header={0} footer={1}>
+      <Header typeOfHeader={typeOfHeader}/>
+      <Main header={typeOfHeader} footer={typeOfFooter}>
          <Outlet></Outlet>
       </Main>
       <Footer/>
