@@ -6,13 +6,11 @@ import { NotFound } from "./pages/NotFound";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter> 
       <Routes>
-        <Route element={<Layout typeOfFooter={0} typeOfHeader={0} />}>
-          <Route path="/about" element={<About />} />
-        </Route>
         <Route element={<Layout typeOfFooter={1} typeOfHeader={1}/>}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
@@ -21,4 +19,3 @@ const App: React.FC = () => {
 };
 
 export default App;
-
