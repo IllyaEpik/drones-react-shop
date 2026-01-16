@@ -10,17 +10,15 @@ export function useFetch<T>(url:string,method="GET"): [T | undefined, boolean, u
             try {
                 const response = await fetch(url,{method: method})
                 const json = await response.json() as T
-                console.log(await json)
                 setData(await json)
             } catch (error) {
                 setError(error)
-                console.log(error)
             } finally {
                 setLoading(false)
             }
         }
         fetchData()
         
-    }, [url,refetchIndex])
+    }, [refetchIndex])
     return [ data, loading, error, refresh ]
 } 
