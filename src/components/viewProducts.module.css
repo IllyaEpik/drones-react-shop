@@ -1,0 +1,12 @@
+.productList{
+    display: flex;
+    gap: 10px;
+    width: 840px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.product{
+    border: 1px black solid;
+    width: 200px;
+}

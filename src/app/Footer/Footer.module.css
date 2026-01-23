@@ -41,19 +41,23 @@
 } */
 
 .menu {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  list-style: none;
-  margin-bottom: 40px;
-  padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 32px;
+	list-style: none;
+	margin-bottom: 40px;
+	padding: 0;
 }
 
 .copy {
-  font-size: 12px;
-  padding-top: 10px;
-  margin-top: 20px;
-  border-top: rgba(244, 244, 244, 1) solid 2px;
-  width: 95%;
-  opacity: 0.6;
+	font-size: 12px;
+	padding-top: 10px;
+	margin-top: 20px;
+	border-top: rgba(244, 244, 244, 1) solid 2px;
+	width: 95%;
+	opacity: 0.6;
+}
+.link{
+	color: black;
+	text-decoration: none;
 }

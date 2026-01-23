@@ -1,7 +1,14 @@
 import styles from './Home.module.css';
 import droneImg from '../../assets/drone.png'; 
+import { useProduct } from '../../hooks/useProduct';
+import { useState } from 'react';
+import { ViewProducts } from '../../components';
 
-const Home = () => {
+export function Home(){
+  const [take, setTake] = useState(10)
+  const [skip, setSkip] = useState(0)
+  const [ data, loading, error, refresh] = useProduct(take,skip,"new")
+  console.log(data)
   return (
     <section className={styles.hero}>
       <h1>
@@ -15,10 +22,9 @@ const Home = () => {
           Передові технології сьогодення. <br />
           Обирай найкраще для себе.
         </p>
-        <button>ДО КАТАЛОГУ</button>
+        <ViewProducts></ViewProducts>
+        {/* <button>ДО КАТАЛОГУ</button> */}
       </div>
     </section>
   );
 };
-
-export default Home;

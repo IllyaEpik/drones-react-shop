@@ -3,7 +3,7 @@ import aboutImg from "../../assets/tower.png";
 import officeImg from "../../assets/room.png";
 import teamImg from "../../assets/people.png";
 
-const About = () => {
+export function About(){
   return (
     <>
       
@@ -46,5 +46,3 @@ const About = () => {
     </>
   );
 };
-
-export default About;

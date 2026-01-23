@@ -1,28 +1,27 @@
+import { Link } from 'react-router-dom'
 import { SVG } from '../../shared/SVG'
 import styles from './Footer.module.css'
 
 
-const Footer: React.FC = () => {
+export function Footer(){
   return (
     <footer className={styles.footer}>
       
 		
-	  <SVG.footerDrones/>
-      <ul className={styles.menu}>
-        <li>Каталог</li>
-        <li>Про нас</li>
-        <li>Контакти</li>
-        <li>Кошик</li>
-        <li>Кабінет</li>
-      </ul>
+	<SVG.FooterDrones/>
+	<ul className={styles.menu}>
+		<li>Каталог</li>
+		<li className={styles.link}><Link to="/about" className={styles.link}>
+			Про нас
+			</Link></li>
+		<li>Контакти</li>
+		<li>Кошик</li>
+		<li>Кабінет</li>
+	</ul>
 
-      {/* <div></div> */}
-      <div className={styles.copy}>
-		
-        © 2025 Drones Всі права захищені.
-      </div>
+		<div className={styles.copy}>
+			© 2025 Drones Всі права захищені.
+		</div>
     </footer>
   )
-}
-
-export default Footer
+} 
