@@ -6,4 +6,5 @@ export interface IProduct{
     quantityLimit: number;
     id: number;
     categoryId: number;
+    img:string
 }

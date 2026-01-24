@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useProduct } from "../hooks/useProduct";
 import styles from "./viewProducts.module.css";
 import { IProduct } from "../shared/types";
+import { SVG } from "../shared/SVG";
 export function ViewProducts(){
     // const [count, setCount] = useState(4)
     // const [skip, setSkip] = useState(4)
@@ -16,22 +17,22 @@ export function ViewProducts(){
         update.setSkip(info.skip+4)
     }
     return (
-        <div>
+        <div className={styles.allComponent}>
             <div className={styles.productList}>
 
                 {allProducts.map((product)=>{
 
                     return <div className={styles.product}>
-                        <h2>{product.name}</h2>
-                        <h3>description: {product.description}</h3>
-                        <h3>price: {product.price}</h3>
-                        <h3>discount: {product.discount}</h3>
-                        <h3>quantity limit: {product.quantityLimit}</h3>
+                        <img src={product.img} alt="" className={styles.img} />
+                        {/* <div className={styles.data}> */}
+                        <strong  className={styles.name}>{product.name}</strong>
 
+                        <span className={styles.price}>{product.price}₴</span>
+                        {/* </div> */}
                     </div>
                 })}
             </div>
-            <button onClick={nextProductsFunc}>next</button>
+            <button className={styles.button} onClick={nextProductsFunc}><span>Дивитись всі</span> <SVG.RightArrow/></button>
         </div>
     )
 }

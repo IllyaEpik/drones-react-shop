@@ -1,9 +1,13 @@
-  @font-face {
-    font-family: 'MyCustomFont';
+@font-face {
+    font-family: 'GTWalsheimPro';
     src: url('./GTWalsheimPro.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
-  .page{
-    font-family: "MyCustomFont";
-  }
+}
+.page{
+	font-family: "GTWalsheimPro" !important;
+}
+.page > * {
+	font-family: "GTWalsheimPro" !important;
+
+}
