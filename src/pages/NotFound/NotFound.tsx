@@ -5,7 +5,7 @@ import React from "react";
 
 
 
-export const NotFound: React.FC = () => {
+export function NotFound(){
   return (
     <div className={styles.wrapper}>
       <h1 className={styles.title}>Ви перейшли не на ту сторінку </h1>
@@ -13,9 +13,7 @@ export const NotFound: React.FC = () => {
 
       <img src={droneImg} alt="drone" className={styles.drone} />
 
-      <div className={styles.circle}></div>
+      {/* <div className={styles.circle}></div> */}
     </div>
   );
 };
-
-export default NotFound;

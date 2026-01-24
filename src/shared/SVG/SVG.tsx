@@ -1,11 +1,15 @@
-import { ReactComponent as headerDrones } from "../../assets/headerDrones.svg";
-import { ReactComponent as footerDrones } from "../../assets/footerDrones.svg";
-import { ReactComponent as basket } from "../../assets/basket.svg";
-import { ReactComponent as human } from "../../assets/human.svg";
+import { ReactComponent as HeaderDrones } from "../../assets/headerDrones.svg";
+import { ReactComponent as FooterDrones } from "../../assets/footerDrones.svg";
+import { ReactComponent as Basket } from "../../assets/basket.svg";
+import { ReactComponent as Human } from "../../assets/human.svg";
+import { ReactComponent as Burger } from "../../assets/burger.svg";
+import { ReactComponent as RightArrow } from "../../assets/rightArrow.svg";
 
 export const SVG = {
-    headerDrones,
-    footerDrones,
-    basket,
-    human
+    HeaderDrones,
+    FooterDrones,
+    Basket,
+    Human,
+    Burger,
+    RightArrow
 }

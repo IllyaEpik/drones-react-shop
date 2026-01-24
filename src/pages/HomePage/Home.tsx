@@ -1,7 +1,18 @@
 import styles from './Home.module.css';
+<<<<<<< HEAD
 import droneImg from '../../assets/drone.png';
+=======
+import droneImg from '../../assets/drone.png'; 
+import { useProduct } from '../../hooks/useProduct';
+import { useState } from 'react';
+import { ViewProducts } from '../../components';
+>>>>>>> 92389058f635f95bcfc0d99683b4d8a859639315
 
-const Home = () => {
+export function Home(){
+  const [take, setTake] = useState(10)
+  const [skip, setSkip] = useState(0)
+  const [ data, loading, error, refresh] = useProduct(take,skip,"new")
+  console.log(data)
   return (
     <>
       
@@ -12,6 +23,7 @@ const Home = () => {
 
         <div className={styles.curve}></div>
 
+<<<<<<< HEAD
         <img src={droneImg} alt="Drone" className={styles.drone} />
 
         <div className={styles.sideInfo}>
@@ -86,3 +98,16 @@ const Home = () => {
 };
 
 export default Home;
+=======
+      <div className={styles.textBlock}>
+        <p>
+          Передові технології сьогодення. <br />
+          Обирай найкраще для себе.
+        </p>
+        <ViewProducts></ViewProducts>
+        {/* <button>ДО КАТАЛОГУ</button> */}
+      </div>
+    </section>
+  );
+};
+>>>>>>> 92389058f635f95bcfc0d99683b4d8a859639315

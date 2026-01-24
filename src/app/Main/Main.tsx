@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+// import { Link, Outlet } from 'react-router-dom'
 import styles from './Main.module.css'
-import Basket from '../../assets/basket.svg'
-import Human from '../../assets/human.svg'
+// import Basket from '../../assets/basket.svg'
+// import Human from '../../assets/human.svg'
 import { IProbs } from './maInTypes'
 
 export function Main(probs:IProbs) {
@@ -11,7 +11,7 @@ export function Main(probs:IProbs) {
     return (
         <main>
             {
-                headerType == 1 && 
+                headerType === 1 && 
                 <div className={`${styles.oval} ${styles.topOval}`}/>
 
             
@@ -20,8 +20,6 @@ export function Main(probs:IProbs) {
             <div className={styles.main}>
             {children}
             </div>
-
-            {/* <section className={styles.statsSection}> */}
                 <div className={styles.oval}>
                     <div className={styles.stats}>
                         <div className={styles.stat}>
@@ -38,7 +36,6 @@ export function Main(probs:IProbs) {
                         </div>
                     </div>
                 </div>
-        {/* </section> */}
         </main>
     )
 }
