@@ -1,12 +1,12 @@
 import styles from './Home.module.css';
-<<<<<<< HEAD
-import droneImg from '../../assets/drone.png';
-=======
+
+
+
 import droneImg from '../../assets/drone.png'; 
 import { useProduct } from '../../hooks/useProduct';
 import { useState } from 'react';
 import { ViewProducts } from '../../components';
->>>>>>> 92389058f635f95bcfc0d99683b4d8a859639315
+
 
 export function Home(){
   const [take, setTake] = useState(10)
@@ -23,7 +23,7 @@ export function Home(){
 
         <div className={styles.curve}></div>
 
-<<<<<<< HEAD
+
         <img src={droneImg} alt="Drone" className={styles.drone} />
 
         <div className={styles.sideInfo}>
@@ -98,7 +98,9 @@ export function Home(){
 };
 
 export default Home;
-=======
+export const HomePage = () => {
+  return (
+    <section className={styles.homePage}>
       <div className={styles.textBlock}>
         <p>
           Передові технології сьогодення. <br />
@@ -110,4 +112,4 @@ export default Home;
     </section>
   );
 };
->>>>>>> 92389058f635f95bcfc0d99683b4d8a859639315
+
