@@ -1,1 +1,1 @@
-export type{ IProduct } from "./dbTypes";
+export type { IProduct } from "./dbTypes";

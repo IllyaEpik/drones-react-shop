@@ -1,13 +1,18 @@
 @font-face {
-    font-family: 'GTWalsheimPro';
-    src: url('./GTWalsheimPro.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+	font-family: "GTWalsheimPro";
+	src: url("../../assets/font/GTWalsheimPro.ttf") format("truetype");
+	font-weight: 900;
+	font-style: bold;
 }
-.page{
-	font-family: "GTWalsheimPro" !important;
+@font-face {
+	font-family: "GTWalsheimProBold";
+	src: url("../../assets/font/UltraBold.woff2") format("woff2");
+	font-weight: 900;
+	/* font-style: bold; */
 }
-.page > * {
-	font-family: "GTWalsheimPro" !important;
-
+.page {
+	font-family: "GTWalsheimPro";
 }
+/* .page > button {
+	font-family: "GTWalsheimProBold";
+} */

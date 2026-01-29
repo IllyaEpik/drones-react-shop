@@ -1,3 +1,3 @@
-export interface IProbs{
-    typeOfHeader:number
+export interface IProbs {
+	typeOfHeader: number;
 }

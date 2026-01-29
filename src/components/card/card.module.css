@@ -1,0 +1,84 @@
+.backgound-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 1;
+	border-radius: 10px;
+}
+.card-content {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: end;
+	height: 233px;
+	position: absolute;
+	padding: 30px 30px;
+	width: calc(100% - 60px);
+	bottom: 0;
+	gap: 69px;
+}
+.card {
+	width: 437px;
+	height: 437px;
+	border-radius: 20px;
+	text-align: center;
+	position: relative;
+	color: #fff;
+}
+.priceAndBuy {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.title {
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 44px;
+	line-height: 100%;
+}
+
+.price {
+	display: block;
+	/* margin-bottom: 16px; */
+	font-size: 14px;
+}
+
+.buyButton {
+	background: rgba(255, 255, 255, 0);
+	border: 1px solid white;
+	display: flex;
+	gap: 16px;
+	text-align: center;
+	align-items: center;
+	border-radius: 20px;
+	padding: 10px 20px;
+	color: #fff;
+	cursor: pointer;
+}
+.dataBlock {
+	/* margin-bottom: 10px; */
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: baseline;
+	height: 76px;
+	gap: 8px;
+}
+.rightArrow {
+	width: 16px;
+	height: 16px;
+}
+.drone {
+	width: 354.142333984375px;
+	height: 354.142333984375px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 3;
+	transform: translate(-50%, -50%);
+}
