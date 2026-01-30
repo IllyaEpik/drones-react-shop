@@ -8,7 +8,7 @@
 	align-items: center;
 	gap: 80px;
 	/* overflow-x: hidden; */
-	overflow-y: visible;
+	/* overflow-y: visible; */
 	overflow-x: hidden;
 	/* height: 100vh; */
 	/* transform: translateY(50%); */
@@ -24,26 +24,44 @@
 
 
 .menu {
+	z-index: 1;
+	list-style: none;
+	padding: 0 50px;
+	margin: 0;
 	display: flex;
 	justify-content: center;
-	gap: 32px;
-	list-style: none;
-	margin-bottom: 40px;
-	padding: 0;
+	flex-wrap: wrap;
+	gap: 27px;
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 0.4px;
 }
 .oval {
 	width: 123vw;
-	height: 350px;
+	height: 850.2557983398469px;
 	/* position: relative; */
-	transform: translateY(-25%);
+	transform: translateY(-50%);
 	border-radius: 50%;
 	background-color: white;
-	margin-bottom: -160px;
 	z-index: 50;
 	display: flex;
 	justify-content: center;
-    align-items: center;
-	
+    align-items: flex-end;
+	/* margin-bottom: 13px; */
+	/* margin-bottom: 500px; */
+	position: absolute;
+
+}
+.phoneOval{
+	height: 950px;
+	width: 2016.56100869px;
+}
+.drones{
+	margin-top: 450px;
+	/* width: 63vw; */
+}
+.phoneDrones{
+	width: 343.0000915527344px;
 }
 .copy {
 	font-size: 12px;
@@ -62,9 +80,14 @@
 .stats {
 	display: flex;
 	justify-content: space-evenly;
-	gap: 87px;
+	gap: 180px;
 	text-align: center;
 	z-index: 50;
+	margin-bottom: 100px;
+}
+.phoneStats{
+	flex-direction: column;
+	gap: 16px;
 }
 .stat {
 	display: flex;
@@ -75,7 +98,7 @@
 	z-index: 50;
 }
 .stats strong {
-	font-size: 32px;
+	font-size: 44px;
 	display: block;
 	z-index: 50;
 	color: black;
@@ -86,7 +109,7 @@
 .stats span {
 	color: rgba(12, 18, 42, 1);
 	z-index: 50;
-	
+	font-size: 16px;
 	font-family: "GTWalsheimPro";
 
 }

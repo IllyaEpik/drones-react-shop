@@ -38,14 +38,17 @@ export function Header(probs: IProbs) {
 					</div>
 				</div>
 			</header>
-			
-			<div className={styles.curveContainer}>
-				<h1 className={styles.title}>
-					ТЕХНОЛОГІЇ <br /> ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ
-				</h1>
-				<div className={styles.curve}></div>
+			{
+				typeOfHeader===1 && <div className={styles.curveContainer}>
+					<h1 className={`${styles.title} ${isTabletOrMobile && styles.phoneTitle}`}>
+						<span>ТЕХНОЛОГІЇ</span>
+						<span>ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</span>  
+					</h1>
+					<div className={`${styles.curve} ${isTabletOrMobile && styles.phoneCurve}`}></div>
 
-			</div>
+				</div>
+			}
+			
 		</div>
 	);
 }

@@ -3,6 +3,7 @@ import { Layout } from "./Layout";
 import { Home } from "../pages/HomePage/Home";
 import { About } from "../pages/AboutPage/About";
 import { NotFound } from "../pages/NotFound";
+import { Catalog } from "../pages/catalogPage/Catalog";
 
 const App: React.FC = () => {
 	return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
 
 				<Route element={<Layout typeOfFooter={1} typeOfHeader={0} />}>
 					<Route path="/about" element={<About />} />
+					<Route path="/catalog" element={<Catalog />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

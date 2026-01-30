@@ -3,11 +3,12 @@ import { SVG } from "../../shared/images";
 import { useProduct } from "../../hooks/useProduct";
 import React, { useState } from "react";
 import styles from "./viewProducts.module.css";
-export function ViewProducts() {
+import { IProbs } from "./types";
+export function ViewProducts(probs:IProbs) {
 	// const [count, setCount] = useState(4)
 	// const [skip, setSkip] = useState(4)
 	const [staticProducts, setStaticProducts] = useState<IProduct[]>([]);
-	const [products, loading, error, update, info] = useProduct(4, 0, "new");
+	const [products, loading, error, update, info] = useProduct(probs.count, 0, "new");
 	console.log(products);
 	if (!products || loading) return null;
 

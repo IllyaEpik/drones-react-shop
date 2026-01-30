@@ -11,30 +11,36 @@
 
 .drone {
 	position: absolute;
-	top: 170.16px;
-	left: 45%;
+	top: 140.16px;
+	left: 50%;
 	transform: translateX(-50%) rotate(11deg);
 	z-index: 9999;
 	width: 811.6474603654409px;
 	margin-bottom: 200px;
 	height: 811.6474603654409px;
 }
-
 .sideInfo {
 	position: absolute;
-	top: 700px;
-	right: 50vw;
+	top: 650px;
+	right: 45vw;
 	transform: translateX(200%);
-	max-width: 300px;
+	width: 300px;
 	
 	z-index: 4;
 }
-
+.phoneSideInfo{
+	transform: translateX(16px);
+	left: 0;
+	/* left: 16px; */
+}
 .sideInfo p {
 	font-size: 14px;
 	margin-bottom: 16px;
 }
+.sideInfo button span{
+	font-family: "GTWalsheimPro";
 
+}
 .sideInfo button {
 	background: #0b1c2d;
 	color: #fff;
@@ -46,6 +52,9 @@
 	cursor: pointer;
 	
 	font-family: "GTWalsheimPro";
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
 
 .sectionTitle {
@@ -67,6 +76,7 @@
 	justify-content: center;
 	gap: 30px;
 	margin-bottom: 80px;
+	margin-top: 80px;
 }
 .catalogGrid {
 	display: grid;
@@ -93,15 +103,22 @@
 	font-weight: 600;
 }
 .aboutUs {
-	width: 550px;
+	width: fit-content;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: -100px;
+	/* margin-top: -100px; */
+	height:250px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	gap: 24px;
+}
+.aboutUsDescription{
+	width: fit-content;
+	max-width: 532px;
+	height: 50px;
+	/* padding: 0 20px; */
 }
 .button {
 	display: flex;
@@ -116,13 +133,36 @@
 	border: 1px solid rgb(0, 0, 0);
 	text-align: center;
 	border-radius: 60px;
-	width: 237px;
+	width: 243px;
 	height: 60px;
-	padding: 10px 20px;
+	padding: 18px 40px;
 	color: black;
 	cursor: pointer;
 }
 .rightArrow path{
 	fill: black !important;
 	/* stroke: black; */
+}
+.empty{
+	width: 100%;
+}
+.phoneEmpty{
+	height: 130px;
+	width: 100%;
+}
+
+.phoneDrone{
+	width: 449.44598356994373px;
+	height: 449.44598356994373px;
+	margin-top: 125px;
+}
+
+.phoneCards{
+	flex-direction: column;
+	gap: 130.48px;
+	align-items: center;
+	justify-content: center;
+}
+.phoneSectionTitle{
+	font-size: 36px !important;
 }

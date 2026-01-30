@@ -1,6 +1,6 @@
 .productList {
 	display: flex;
-	gap: 10px;
+	gap: 16px;
 	width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -36,7 +36,7 @@
 	font-size: 14px;
 	text-transform: uppercase;
 	gap: 16px;
-	margin-bottom: 250px;
+	/* margin-bottom: 250px; */
 	justify-content: center;
 	background: #0c122a;
 	border: 1px solid white;
