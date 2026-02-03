@@ -18,7 +18,11 @@ export function Header(probs: IProbs) {
 				<div className={styles.container}>
 					{!isTabletOrMobile && (
 						<nav className={styles.menu}>
-							<span className={styles.menuItem}>КАТАЛОГ</span>
+							<span className={styles.menuItem}>
+								<Link to="/catalog" className={styles.link}>
+									КАТАЛОГ
+								</Link>
+								</span>
 
 							<span className={styles.menuItem}>
 								<Link to="/about" className={styles.link}>

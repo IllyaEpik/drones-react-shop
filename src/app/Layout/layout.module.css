@@ -8,7 +8,11 @@
 	font-family: "GTWalsheimProBold";
 	src: url("../../assets/font/UltraBold.woff2") format("woff2");
 	font-weight: 900;
-	/* font-style: bold; */
+}
+@font-face {
+	font-family: "GTWalsheimProBoldStyle";
+	src: url("../../assets/font/bold.woff2") format("woff2");
+	/* font-weight: 900; */
 }
 .page {
 	font-family: "GTWalsheimPro";
