@@ -3,7 +3,7 @@ import { Layout } from "./Layout";
 import {Home} from "../pages/HomePage/Home";
 import {About} from "../pages/AboutPage/About";
 import { NotFound } from "../pages/NotFound";
-
+import { Auth } from "../pages/AuthPage/Auth"
 const App: React.FC = () => {
   return (
     <BrowserRouter> 
@@ -16,6 +16,9 @@ const App: React.FC = () => {
         <Route element={<Layout typeOfFooter={1} typeOfHeader={0}/>}>
           <Route path="/about" element={<About />} />
         
+        </Route>
+        <Route element={<Layout typeOfFooter={0} typeOfHeader={0}/>}>
+          <Route path="/auth" element={<Auth />} />
         </Route>
       </Routes> 
 

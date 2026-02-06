@@ -1,0 +1,60 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.card {
+  width: 420px;
+  background: white;
+  border-radius: 14px;
+  padding: 28px;
+}
+
+.top {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.top span {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.active {
+  opacity: 1 !important;
+}
+
+.actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cancel {
+  border: 1px solid #111;
+  background: transparent;
+  padding: 10px 22px;
+  border-radius: 20px;
+}
+
+.submit {
+  background: #0b0f24;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 20px;
+}
+
+.footer {
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.footer span {
+  color: #ff6b00;
+}
