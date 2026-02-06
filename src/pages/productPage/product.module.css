@@ -12,7 +12,7 @@
 	position: absolute;
 	top: 650px;
 	right: 45vw;
-	transform: translateX(200%);
+	/* transform: translateX(200%); */
 	width: 300px;
 	
 	z-index: 4;
@@ -25,16 +25,16 @@
 }
 
 .sideInfo{
-    position: absolute;
-	top: 550px;
-	right: 35vw;
+    position: fixed;
+	top: 57%;
+	right: 3%;
 	display: flex;
     flex-direction: column;
 	
 	z-index: 4;
     background-color: white;
     width: 232px;
-    height: 150px;
+    height: 120px;
     opacity: 1;
     gap: 24px;
     border-radius: 10px;
@@ -83,7 +83,7 @@
 }
 
 .mainImage {
-	width: 60%;
+	width: 90%;
 	border-radius: 16px;
 	margin-bottom: 80px;
 }
@@ -93,7 +93,39 @@
 	gap: 40px;
 	margin-bottom: 80px;
 }
+.verticalBlock{
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 80px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+}
+.textVerticalBlock{
+    width: 60%;
+}
+.titleBlock{
+    font-family: "GTWalsheimPro";
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    text-transform: uppercase;
 
+}
+.description{
+    color: rgba(61, 65, 85, 1)  ;
+    font-family: "GTWalsheimPro";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+
+}
 .block img {
 	width: 50%;
 	border-radius: 16px;
@@ -104,4 +136,55 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.title{
+    font-family: "GTWalsheimProBold";
+    font-weight: 900;
+    font-size: 44px;
+    color: rgba(205, 213, 221, 1);
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.stats {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 180px;
+	text-align: center;
+	z-index: 50;
+	/* margin-bottom: 100px; */
+}
+.phoneStats{
+	flex-direction: column;
+	gap: 16px;
+}
+.stat {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	
+	font-family: "GTWalsheimPro";
+	z-index: 50;
+}
+.stats strong {
+	font-size: 44px;
+	display: block;
+	z-index: 50;
+	color: rgba(109, 113, 127, 1);
+	
+	font-family: "GTWalsheimProBold";
+}
+
+.stats span {
+	color: rgba(12, 18, 42, 1);
+	z-index: 50;
+	font-size: 16px;
+	font-family: "GTWalsheimPro";
+
+}
+.stats strong span{
+	color: rgba(109, 113, 127, 1);
+
 }
