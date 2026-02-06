@@ -8,6 +8,7 @@ import { ReactComponent as Drone } from "../../assets/svg/drone.svg";
 import { ReactComponent as FooterDrones } from "../../assets/svg/footerDrones.svg";
 import { ReactComponent as HeaderDrones } from "../../assets/svg/headerDrones.svg";
 import { ReactComponent as Human } from "../../assets/svg/human.svg";
+import { ReactComponent as Order } from "../../assets/svg/order.svg";
 import { ReactComponent as RightArrow } from "../../assets/svg/rightArrow.svg";
 
 export const SVG = {
@@ -17,7 +18,8 @@ export const SVG = {
 	Human,
 	Burger,
 	RightArrow,
-	Drone
+	Drone,
+	Order
 };
 export const Blocks = {
 	centerBlock,

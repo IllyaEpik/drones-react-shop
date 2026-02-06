@@ -1,22 +1,25 @@
 import type { IProduct } from "../../shared/types";
 import { SVG } from "../../shared/images";
 import { useProduct } from "../../hooks/useProduct";
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./viewProducts.module.css";
-import { IProbs } from "./types";
+import type { IProbs } from "./types";
 export function ViewProducts(probs:IProbs) {
-	// const [count, setCount] = useState(4)
-	// const [skip, setSkip] = useState(4)
+	
+	
+	console.log(probs.count,132132	)
 	const [staticProducts, setStaticProducts] = useState<IProduct[]>([]);
 	const [products, loading, error, update, info] = useProduct(probs.count, 0, "new");
 	console.log(products);
-	if (!products || loading) return null;
+	const {pages} = probs	
+	if (!products || loading || typeof pages !== typeof true) return null;
 
 	const allProducts = staticProducts.concat(products);
 	const nextProductsFunc = () => {
 		setStaticProducts(allProducts);
 		update.setSkip(info.skip + 4);
 	};
+	
 	return (
 		<div className={styles.allComponent}>
 			<div className={styles.productList}>
@@ -33,13 +36,18 @@ export function ViewProducts(probs:IProbs) {
 					);
 				})}
 			</div>
-			<button
+			{
+				pages ? <div></div> : <button
 				className={styles.button}
 				type="submit"
 				onClick={nextProductsFunc}
+				
 			>
 				<span>Дивитись всі</span> <SVG.RightArrow />
 			</button>
+			}
+
+			
 		</div>
 	);
 }

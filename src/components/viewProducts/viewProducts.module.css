@@ -1,13 +1,15 @@
 .productList {
 	display: flex;
 	gap: 16px;
-	width: 100%;
+	width: calc(100% - 50px);
 	flex-wrap: wrap;
 	justify-content: center;
 	margin-bottom: 25px;
+	margin-left: 25px;
+	margin-right: 25px;
 }
 .product {
-	width: 322px;
+	width: 322px !important;
 	height: 336px;
 	display: flex;
 	flex-direction: column;

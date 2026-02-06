@@ -1,7 +1,6 @@
 .hero {
 	position: relative;
 	height: 103vh;
-	/* background: #cdd5dd; */
 	overflow: hidden;
 	top: -123px;
 }
@@ -31,7 +30,6 @@
 .phoneSideInfo{
 	transform: translateX(16px);
 	left: 0;
-	/* left: 16px; */
 }
 .sideInfo p {
 	font-size: 14px;
