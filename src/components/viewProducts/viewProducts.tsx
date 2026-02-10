@@ -1,38 +1,52 @@
-import type { IProduct } from "../../shared/types";
-import { SVG } from "../../shared/images";
+import { useEffect, useState } from "react";
 import { useProduct } from "../../hooks/useProduct";
-import { useState } from "react";
-import styles from "./viewProducts.module.css";
+import { SVG } from "../../shared/images";
+import type { IProduct } from "../../shared/types";
 import type { IProbs } from "./types";
+import styles from "./viewProducts.module.css";
+import { useNavigate } from "react-router-dom";
 export function ViewProducts(probs:IProbs) {
 	
-	
-	console.log(probs.count,132132	)
+	const {pages,categoryId, skip} = probs
+	console.log(skip,213132231)
 	const [staticProducts, setStaticProducts] = useState<IProduct[]>([]);
-	const [products, loading, error, update, info] = useProduct(probs.count, 0, "new");
-	console.log(products);
-	const {pages} = probs	
+	const [products, loading, error, update, info] = useProduct(probs.count, skip ? skip : 0, "new",categoryId);
+	const navigate = useNavigate()
+	useEffect(() => {
+		update.setSkip(skip || 0);
+        update.setCategory(categoryId || "all");
+		},[skip,categoryId]
+	)
 	if (!products || loading || typeof pages !== typeof true) return null;
 
-	const allProducts = staticProducts.concat(products);
+	const allProducts = pages ? products : staticProducts.concat(products)
 	const nextProductsFunc = () => {
 		setStaticProducts(allProducts);
 		update.setSkip(info.skip + 4);
 	};
-	
+	function redirect(id:number) {
+		navigate(`/product/${id}`)
+	}
 	return (
 		<div className={styles.allComponent}>
 			<div className={styles.productList}>
 				{allProducts.map((product) => {
 					return (
-						<div className={styles.product} key={product.id}>
+						<button 
+							className={styles.product} 
+							key={product.id} 
+							type="button"
+							onClick={() => redirect(product.id)}
+							>
 							<img src={product.img} alt="" className={styles.img} />
-							{/* <div className={styles.data}> */}
-							<strong className={styles.name}>{product.name}</strong>
+							<div className={styles.description}>
 
-							<span className={styles.price}>{product.price}₴</span>
-							{/* </div> */}
-						</div>
+								<strong className={styles.name}>{product.name}</strong>
+
+								<span className={styles.price}>{product.price}₴</span>
+							</div>
+							<SVG.BasketButton className={styles.basketButton}/>
+						</button>
 					);
 				})}
 			</div>

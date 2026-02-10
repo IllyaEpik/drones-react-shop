@@ -4,20 +4,26 @@ import { Button } from "../../shared/button";
 import { BETA, SVG } from "../../shared/images";
 import styles from "./product.module.css";
 import { ViewProducts } from "../../components/viewProducts";
+import { useIdProduct } from "../../hooks/useIdProduct";
+import { useParams } from "react-router-dom";
 
 export function Product(){
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
+    const {id} = useParams<{ id: string }>()
+    console.log(id,useParams<{ id: string }>())
+    const [product, loading, error] = useIdProduct(Number(id))
+    console.log(product)
+    if (!product) return null
     return (
         <div>
             <section className={styles.hero}>
-                <SVG.Drone className={`${styles.drone} ${isTabletOrMobile && styles.phoneDrone}`}/>
-
+                <img src={product.img} alt="" className={`${styles.drone} ${isTabletOrMobile && styles.phoneDrone}`} />
                 <div className={`${styles.sideInfo} ${isTabletOrMobile && styles.phoneSideInfo}`}>
                     <div className={styles.previewSideInfo}>
-                        <SVG.Drone className={styles.miniDrone}/>
+                        <img src={product.img} alt="" className={styles.miniDrone} />
                         <div className={styles.textSideInfo}>
-                            <span className={styles.titleSideInfo}>DJI Mini 4 Pro</span>
-                            <span className={styles.priceSideInfo}>29 900 ₴ </span>
+                            <span className={styles.titleSideInfo}>{product.name}</span>
+                            <span className={styles.priceSideInfo}>{product.price}₴</span>
                         </div>
                     </div>
                     <div className={styles.innerSideInfo}>

@@ -3,6 +3,7 @@ import { ReactComponent as leftBlock } from "../../assets/blocks/desertBlock.svg
 import { ReactComponent as centerBlock } from "../../assets/blocks/natureBlock.svg";
 
 import { ReactComponent as Basket } from "../../assets/svg/basket.svg";
+import { ReactComponent as BasketButton } from "../../assets/svg/basketButton.svg";
 import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 import { ReactComponent as Drone } from "../../assets/svg/drone.svg";
 import { ReactComponent as FooterDrones } from "../../assets/svg/footerDrones.svg";
@@ -10,6 +11,8 @@ import { ReactComponent as HeaderDrones } from "../../assets/svg/headerDrones.sv
 import { ReactComponent as Human } from "../../assets/svg/human.svg";
 import { ReactComponent as Order } from "../../assets/svg/order.svg";
 import { ReactComponent as RightArrow } from "../../assets/svg/rightArrow.svg";
+import { ReactComponent as SkipNextFilled } from "../../assets/svg/SkipNextFilled.svg";
+import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPreviousFilled.svg";
 
 export const SVG = {
 	HeaderDrones,
@@ -19,7 +22,10 @@ export const SVG = {
 	Burger,
 	RightArrow,
 	Drone,
-	Order
+	Order,
+	SkipPreviousFilled,
+	SkipNextFilled,
+	BasketButton
 };
 export const Blocks = {
 	centerBlock,
