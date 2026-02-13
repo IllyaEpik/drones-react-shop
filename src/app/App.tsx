@@ -3,6 +3,8 @@ import { Layout } from "./Layout";
 import {Home} from "../pages/HomePage/Home";
 import {About} from "../pages/AboutPage/About";
 import { NotFound } from "../pages/NotFound";
+import { ResetPassword } from "../pages/ResetPsswordPage/ResetPassword";
+
 
 const App: React.FC = () => {
   return (
@@ -17,6 +19,10 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
         
         </Route>
+                  <Route element={<Layout typeOfFooter={0} typeOfHeader={0}/>}>
+                      <Route path="/reset-password" element={<ResetPassword />} />
+                    </Route>
+
       </Routes> 
 
     </BrowserRouter>
