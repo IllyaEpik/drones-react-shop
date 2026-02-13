@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 // import Basket from '../../assets/basket.svg'
 import { useMediaQuery } from "react-responsive";
@@ -7,13 +7,20 @@ import { useMediaQuery } from "react-responsive";
 
 import type{ IProbs } from "./headerTypes";
 import { SVG } from "../../shared/images";
-import { HeaderContext, IHeaderContract } from "../../context";
+import { HeaderContext } from "../../context";
+import { useUserContext } from "../../context/userContext";
 export function Header(probs: IProbs) {
 	const typeOfHeader = probs.typeOfHeader;
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 	const headerContext = useContext(HeaderContext)
-	// if (!headerContext) return
-	// const {headerText} = headerContext
+	const navigate = useNavigate()
+	const userContext = useUserContext()
+	
+	function profile() {
+		if (!userContext.user){
+			navigate("/auth")
+		}
+	}
 	return (
 		<div
 			className={`${styles.headerContainer} ${typeOfHeader !== 1 && styles.whiteHeaderContainer}`}
@@ -41,7 +48,7 @@ export function Header(probs: IProbs) {
 					</div>
 					<div className={styles.actions}>
 						<SVG.Basket className={styles.Icons} />
-						<SVG.Human className={styles.Icons} />
+						<SVG.Human className={styles.Icons} onClick={profile}/>
 						{isTabletOrMobile && <SVG.Burger className={styles.Icons} />}
 					</div>
 				</div>

@@ -1,26 +1,49 @@
-import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { Home } from "../HomePage";
 import styles from "./Auth.module.css";
-import { UserContext } from "../../context/userContext";
+import { UserContext, useUserContext } from "../../context/userContext";
+import type{ AuthCredentials,RegisterCredentials } from "../../shared/types";
+import { AuthToggle } from "../../components/AuthToggle/AuthToggle";
+// import { AuthCredentials } from "../../shared/types/dbTypes";
 
 export function Auth() {
   	const [mode, setMode] = useState<"login" | "register">("register");
 	const navigate = useNavigate()
-	// const userContext = useContext(UserContext)
-	// if (!userContext) return
-	// function reg() {
-	// 	if (!userContext) return
-		// userContext.register({
-			
-		// })
+	const userContext = useContext(UserContext)
+	const {handleSubmit, register, formState: {errors}} = useForm<AuthCredentials>()
+    const {registration,login,user} = useUserContext()
+	
+	useEffect(() => {
+		if (!user) return
 		
-	// }
+		navigate("/")
+	},[user])
+
+	if (!userContext) return null
+	const emailError = errors.email?.message
+	const passwordError = errors.password?.message
+	const rootError = errors.root?.message
+	const usernameError = errors.username?.message
+	const confirmPasswordError = errors.confirmPassword?.message
+	
+	function isRegisterData(data: AuthCredentials): data is RegisterCredentials {
+		return Boolean(data.username && data.confirmPassword);
+	}
+    function onSubmit(data:AuthCredentials){
+        if (mode === "register") {
+			if (!isRegisterData(data)) return
+            registration(data);
+        } else {
+            if (!login(data)) return
+        }
+    }
 	function change() {
 		if (mode==="register"){
 			setMode("login")
-			return
+			return null
 		}
 		// navigate(to="/forgotPassword")
 	}
@@ -28,44 +51,67 @@ export function Auth() {
 		<>
 			<Home></Home>
 			<div className={styles.background}></div>
-			<form className={styles.wrapper} method="GET">
+			<form noValidate className={styles.wrapper} method="GET"  onSubmit={handleSubmit(onSubmit)}>
 				<div className={styles.card}>
-					<div className={styles.top}>
-						<button
-							className={`${mode === "login" && styles.active} ${styles.button}`}
-							onClick={() => setMode("login")}
-							type="button"
-						>
-							Авторизація
-						</button>
-						/
-						<button
-							className={`${mode === "register" && styles.active} ${styles.button}`}
-							onClick={() => setMode("register")}
-							type="button"
-						>
-							Реєстрація
-						</button>
+					<AuthToggle mode={mode} setMode={setMode}/>
+					<p>{rootError}</p>
+					<div className={styles.inputs}>
+						{mode === "register" && (
+							<>
+							<Input 
+								label="Імʼя" 
+								placeholder="Введіть імʼя"
+								{...register("username", { required: "Обов'язкове поле" })}
+							/>
+							{usernameError && <p className={styles.fieldError}>{usernameError}</p>}
+							</>
+						)}
+
+						<Input 
+							label="Email" 
+							placeholder="Введіть email" 
+							type="email"
+							{...register("email", { 
+								required: "Обов'язкове поле" ,
+								validate: (value) => {
+									if (value.startsWith('@') || value.endsWith("@") || !value.includes("@")){
+										return "invalid email"
+									} else if (typeof value !== 'string') {
+										return "Email must contain only letters or numbers"
+									}
+								}
+							})}
+							
+						/>
+						{emailError && <p className={styles.fieldError}>{emailError}</p>}
+
+						<Input 
+							label="Пароль" 
+							type="password" 
+							placeholder="Введіть пароль"
+							{...register("password", { required: "Обов'язкове поле" })}
+						/>
+
+						{passwordError && <p className={styles.fieldError}>{passwordError}</p>}
+
+						{mode === "register" && (
+							<>
+								<Input
+									label="Підтвердження пароля"
+									type="password"
+									placeholder="Повторіть пароль"
+									{...register("confirmPassword", { required: "Обов'язкове поле" })}
+								/>
+							
+								{confirmPasswordError && <p className={styles.fieldError}>{confirmPasswordError}</p>}
+							</>
+						)}
+
+						<span onClick={change} className={styles.smallText}>{
+							mode === "register" ? "Вже є акаунт? Увійти" : "Забули пароль?"
+						}</span>
 					</div>
 
-					{mode === "register" && (
-					<Input label="Імʼя" placeholder="Введіть імʼя" />
-					)}
-
-					<Input label="Email" placeholder="Введіть email" />
-
-					<Input label="Пароль" type="password" placeholder="Введіть пароль" />
-
-					{mode === "register" && (
-					<Input
-						label="Підтвердження пароля"
-						type="password"
-						placeholder="Повторіть пароль"
-					/>
-					)}
-					<span onClick={change} className={styles.smallText}>{
-						mode === "register" ? "Вже є акаунт? Увійти" : "Забули пароль?"
-					}</span>
 					<div className={styles.actions}>
 						<button 
 							className={styles.cancel} 
@@ -74,7 +120,7 @@ export function Auth() {
 						>Скасувати</button>
 						<button 
 							className={styles.submit} 
-							type="button"
+							type="submit"
 							// onClick={() => navigate("/")}
 							>
 							{mode === "login" ? "Увійти" : "Зареєструватися"}

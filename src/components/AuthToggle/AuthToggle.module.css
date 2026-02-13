@@ -1,0 +1,27 @@
+.top {
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+.top button {
+	cursor: pointer;
+	opacity: 0.5;
+	font-family: "GTWalsheimPro";
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 20px;
+	line-height: 28px;
+	letter-spacing: 0%;
+	vertical-align: middle;
+
+}
+
+.active {
+	opacity: 1 !important;
+	color: black !important;
+}
+.button{
+	background-color: transparent;
+	border: none;
+	color: rgba(158, 160, 170, 1);
+}

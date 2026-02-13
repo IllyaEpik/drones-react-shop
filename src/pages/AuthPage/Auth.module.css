@@ -23,38 +23,24 @@
     padding: 28px;
 }
 
-.top {
-	font-weight: 600;
-	margin-bottom: 20px;
-}
 
-.top button {
-	cursor: pointer;
-	opacity: 0.5;
-	font-family: "GTWalsheimPro";
-	font-weight: 500;
-	font-style: Medium;
-	font-size: 20px;
-	line-height: 28px;
-	letter-spacing: 0%;
-	vertical-align: middle;
-
-}
-
-.active {
-	opacity: 1 !important;
-	color: black !important;
-}
-.button{
-	background-color: transparent;
-	border: none;
-	color: rgba(158, 160, 170, 1);
-}
 
 .actions {
 	margin-top: 24px;
 	display: flex;
-	justify-content: space-between;
+	gap: 10px;
+	justify-content: flex-start;
+	/* justify-content: space-between; */
+}
+.actions button {
+	font-family: "GTWalsheimPro";
+	font-weight: 500;
+	font-style: Medium;
+	font-size: 14px;
+	line-height: 100%;
+	letter-spacing: 9%;
+	text-transform: uppercase;
+
 }
 
 .cancel {
@@ -64,7 +50,12 @@
 	border-radius: 20px;
 	cursor: pointer;
 }
+.fieldError{
+	color: red;
+	font-size: 14px;
+	margin-top: -10px;
 
+}
 .submit {
 	background: #0b0f24;
 	color: white;
@@ -74,7 +65,11 @@
 	cursor: pointer;
 
 }
-
+.inputs{
+	flex-direction: column;
+	gap: 16px;
+	display: flex;
+}
 .footer {
 	margin-top: 16px;
 	font-size: 12px;

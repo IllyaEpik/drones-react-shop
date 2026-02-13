@@ -18,7 +18,7 @@ export function Modal({ open, onClose, title, children }: ModalProps) {
 			>
 				<div className={styles.header}>
 				<h3>{title}</h3>
-				<button onClick={onClose}>✕</button>
+				<button onClick={onClose} type="button">✕</button>
 				</div>
 
 				{children}

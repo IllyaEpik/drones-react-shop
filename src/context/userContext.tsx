@@ -1,48 +1,57 @@
-import {createContext, type ReactNode, useEffect, useState } from "react"
+import {createContext, type ReactNode, useContext, useEffect, useState } from "react"
 // import { useRegister } from "../hooks/useRegister"
 import type { IUser, LoginCredentials, RegisterCredentials } from "../shared/types"
 
 
 export interface IHeaderContract {
     user:IUser | null
-    registration:(registerData: RegisterCredentials) => Promise<string>
-    login:(registerData: LoginCredentials) => void
+    registration:(registerData: RegisterCredentials) => Promise<boolean | string>
+    login:(registerData: LoginCredentials) => Promise<boolean | string>
 }
 interface IProps {
     children:React.ReactNode
 }
 export const UserContext = createContext<IHeaderContract | null>(null)
 
+export function useUserContext() {
+    const context = useContext(UserContext);
+    if (!context) {
+        throw new Error("context not defined");
+    }
+    return context;
+}
 export function UserContextWrapper(props:IProps) {
     const {children} = props
-
     const [token, setToken] = useState<string>("");
     const [user, setUser] = useState<IUser | null>(null);
 
     async function registration(userData: RegisterCredentials): Promise<string> {
+        console.log("regggggggggggggggggggggggggggggggggggggggggggg,","send active")
+        const {confirmPassword, ...fields} = userData
         try {
-            const response = await fetch("http://localhost:8000/register", {
+            const response = await fetch("http://localhost:8000/user/register", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(userData),
+                body: JSON.stringify(fields),
             });
             const result = await response.json();
             if (response.status !== 201) {
-                return result.message;
+                return result;
             }
-            setToken(result.token);
-            localStorage.setItem("token", result.token);
+            console.log(result)
+            setToken(result);
+            localStorage.setItem("token", result);
             return token
         } catch {
-            return "Bad backend";
+            return "Network error";
         }
     }
 
     async function login(userData: LoginCredentials) {
         try {
-            const response = await fetch("http://localhost:8000/login", {
+            const response = await fetch("http://localhost:8000/user/login", {
                 method: "post",
                 headers: {
                     "Content-Type": "application/json",
@@ -51,10 +60,10 @@ export function UserContextWrapper(props:IProps) {
             });
             const result = await response.json();
             if (response.status !== 200) {
-                return result.message;
+                return result;
             }
-            setToken(result.token);
-            localStorage.setItem("token", result.token);
+            setToken(result);
+            localStorage.setItem("token", result);
         } catch {
             return "Network error";
         }
@@ -62,7 +71,7 @@ export function UserContextWrapper(props:IProps) {
 
     async function me() {
         try {
-            const response = await fetch("http://localhost:8000/me", {
+            const response = await fetch("http://localhost:8000/user/me", {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -71,6 +80,7 @@ export function UserContextWrapper(props:IProps) {
             if (response.status === 404) {
                 return result.message;
             }
+            
             setUser(result);
         } catch {
             return "Network error";
