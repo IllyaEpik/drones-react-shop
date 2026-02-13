@@ -6,8 +6,24 @@ import { Blocks } from "../../shared/images/SVG";
 import styles from "./Home.module.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
+import { HeaderContext } from "../../context";
 export function Home() {
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
+	const headerContext = useContext(HeaderContext)
+	
+	useEffect(() => {
+		if (!headerContext) return
+		headerContext.setHeaderText((
+			<>
+				<span>ТЕХНОЛОГІЇ</span>
+				<span>ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</span>
+			</>
+		))
+	},[])
+	
+	// 
+	// 					
 	return (
 		<>
 			<div>

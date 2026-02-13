@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 // import Basket from '../../assets/basket.svg'
@@ -7,9 +7,13 @@ import { useMediaQuery } from "react-responsive";
 
 import type{ IProbs } from "./headerTypes";
 import { SVG } from "../../shared/images";
+import { HeaderContext, IHeaderContract } from "../../context";
 export function Header(probs: IProbs) {
 	const typeOfHeader = probs.typeOfHeader;
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
+	const headerContext = useContext(HeaderContext)
+	// if (!headerContext) return
+	// const {headerText} = headerContext
 	return (
 		<div
 			className={`${styles.headerContainer} ${typeOfHeader !== 1 && styles.whiteHeaderContainer}`}
@@ -45,8 +49,7 @@ export function Header(probs: IProbs) {
 			{
 				typeOfHeader===1 && <div className={styles.curveContainer}>
 					<h1 className={`${styles.title} ${isTabletOrMobile && styles.phoneTitle}`}>
-						<span>ТЕХНОЛОГІЇ</span>
-						<span>ЯКІ ЗМІНЮЮТЬ РЕАЛЬНІСТЬ</span>  
+						{headerContext?.headerText}
 					</h1>
 					<div className={`${styles.curve} ${isTabletOrMobile && styles.phoneCurve}`}></div>
 

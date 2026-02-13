@@ -1,18 +1,31 @@
 // import { Link } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useParams } from "react-router-dom";
+import { ViewProducts } from "../../components/viewProducts";
+import { HeaderContext } from "../../context";
+import { useIdProduct } from "../../hooks/useIdProduct";
 import { Button } from "../../shared/button";
 import { BETA, SVG } from "../../shared/images";
 import styles from "./product.module.css";
-import { ViewProducts } from "../../components/viewProducts";
-import { useIdProduct } from "../../hooks/useIdProduct";
-import { useParams } from "react-router-dom";
 
 export function Product(){
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
     const {id} = useParams<{ id: string }>()
     console.log(id,useParams<{ id: string }>())
     const [product, loading, error] = useIdProduct(Number(id))
-    console.log(product)
+    
+    const headerContext = useContext(HeaderContext)
+
+    useEffect(() => {
+        if (!headerContext || !product || loading) return
+        headerContext.setHeaderText((
+            <>
+                <span>{product.name}</span>
+                <span className={styles.topDescription}>{product.description}</span>
+            </>
+        ))
+    },[loading])
     if (!product) return null
     return (
         <div>
@@ -48,8 +61,8 @@ export function Product(){
                 </div>
                 <div className={styles.block}>
                     <div>
-                        <h2>Основна камера 4/3 CMOS Hasselblad Hasselblad</h2>
-                        <p>У ретельно розробленій 4/3 CMOS-камері Hasselblad використовується абсолютно новий 100-мегапіксельний сенсор і відома технологія Hasselblad Natural Color Solution (HNCS), що забезпечує виняткову точність передачі кольору. 
+                        <h2 className={styles.titleBlock}>Основна камера 4/3 CMOS Hasselblad Hasselblad</h2>
+                        <p className={styles.description}>У ретельно розробленій 4/3 CMOS-камері Hasselblad використовується абсолютно новий 100-мегапіксельний сенсор і відома технологія Hasselblad Natural Color Solution (HNCS), що забезпечує виняткову точність передачі кольору. 
 
                             Вона створює захоплюючі 100-мегапіксельні зображення з високою деталізацією та чіткістю, пропонуючи безпрецедентну гнучкість у пост-обробці. Конструкція об'єктива була перероблена відповідно до вимог 100-мегапіксельної матриці, що забезпечує неймовірну різкість.</p>
                     </div>
@@ -59,8 +72,8 @@ export function Product(){
                 <div className={styles.block}>
                     <img src={BETA.block3} alt="" />
                     <div>
-                        <h2>51-хв час польотуА</h2>
-                        <p>Аеродинамічний дизайн Mavic 4 Pro, ефективна силова установка та акумуляторна батарея ємністю 95 Вт-год забезпечують тривалість польоту до 51 хвилини, максимальну швидкість до 90 км/год та дальність польоту до 41 км (25,4 милі) [2]. 
+                        <h2 className={styles.titleBlock}>51-хв час польоту</h2>
+                        <p className={styles.description}>Аеродинамічний дизайн Mavic 4 Pro, ефективна силова установка та акумуляторна батарея ємністю 95 Вт-год забезпечують тривалість польоту до 51 хвилини, максимальну швидкість до 90 км/год та дальність польоту до 41 км (25,4 милі) [2]. 
 
                             Незалежно від того, чи ви розвідуєте місцевість, відпрацьовуєте маневри, робите затримки в часі або панорамні фото за допомогою телеоб'єктива, достатня тривалість польоту дозволяє вам діяти легко і впевнено.</p>
                     </div>

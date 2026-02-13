@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IProduct } from "../shared/types";
+import type{ IProduct } from "../shared/types";
 
 export function useIdProduct(id:number): [IProduct | undefined, boolean, unknown] {
     const [data, setData] = useState<IProduct>();

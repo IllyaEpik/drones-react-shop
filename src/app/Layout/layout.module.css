@@ -16,6 +16,8 @@
 }
 .page {
 	font-family: "GTWalsheimPro";
+	scrollbar-width: none;
+
 }
 /* .page > button {
 	font-family: "GTWalsheimProBold";

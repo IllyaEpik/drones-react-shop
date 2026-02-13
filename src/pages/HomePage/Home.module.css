@@ -10,7 +10,7 @@
 
 .drone {
 	position: absolute;
-	top: 140.16px;
+	top: 220.16px;
 	left: 50%;
 	transform: translateX(-50%) rotate(11deg);
 	z-index: 9999;
@@ -20,7 +20,7 @@
 }
 .sideInfo {
 	position: absolute;
-	top: 650px;
+	top: 740px;
 	right: 45vw;
 	transform: translateX(200%);
 	width: 300px;
