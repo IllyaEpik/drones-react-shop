@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { ViewProducts } from "../../components/viewProducts";
-import { useCountProduct } from "../../hooks/useCountProducts";
-import { BETA, SVG } from "../../shared/images";
+import { ViewProducts } from "../../components/ViewProducts";
+import { useCountProduct } from "../../hooks";
+import { BETA, SVG } from "../../shared";
 import styles from "./Catalog.module.css";
 
 export function Catalog() {
@@ -40,7 +40,7 @@ export function Catalog() {
 		if (currentPage+count < 1) return
 		setCurrentPage(currentPage+count)
 	}
-	console.log(currentPage,"current",drones*(currentPage-1))
+
 	return (<div> 
 				<h2 className={styles.title}>Каталог</h2>
 				<div className={styles.categories}>

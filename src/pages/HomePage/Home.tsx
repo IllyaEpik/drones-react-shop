@@ -1,8 +1,7 @@
 
-import { ViewProducts } from "../../components/viewProducts";
-import { Card } from "../../components/card";
-import { SVG } from "../../shared/images";
-import { Blocks } from "../../shared/images/SVG";
+import { ViewProducts } from "../../components/ViewProducts";
+import { Card } from "../../components/Card";
+import { SVG,Blocks } from "../../shared";
 import styles from "./Home.module.css";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
@@ -21,9 +20,7 @@ export function Home() {
 			</>
 		))
 	},[])
-	
-	// 
-	// 					
+					
 	return (
 		<>
 			<div>
@@ -35,7 +32,7 @@ export function Home() {
 							Передові технології нового покоління. <br />
 							Обирай найкраще для себе.
 						</p>
-						<Link to="/catalog"><button type="submit"><span>ДО КАТАЛОГУ</span>  <SVG.RightArrow/></button></Link>
+						<Link to="/catalog"><button type="button"><span>ДО КАТАЛОГУ</span>  <SVG.RightArrow/></button></Link>
 					</div>
 				</section>
 				
@@ -48,7 +45,7 @@ export function Home() {
 					</span>
 					<button
 						className={styles.button}
-						type="submit"
+						type="button"
 					>
 						<span>Читати більше</span> <SVG.RightArrow className={styles.rightArrow}/>
 					</button>
@@ -66,7 +63,7 @@ export function Home() {
 
 			<section className={styles.catalog}>
 				<h2 className={`${styles.sectionTitle} ${isTabletOrMobile && styles.phoneSectionTitle}`}>КАТАЛОГ</h2>
-					<ViewProducts count={isTabletOrMobile ? 3 : 4} pages={false}/>
+				<ViewProducts count={isTabletOrMobile ? 3 : 4} pages={false}/>
 			</section>
 			<div className={`${isTabletOrMobile && styles.phoneEmpty} ${styles.empty}`}/>
 		</>

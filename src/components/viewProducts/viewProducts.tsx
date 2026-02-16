@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useProduct } from "../../hooks/useProduct";
-import { SVG } from "../../shared/images";
+import { SVG } from "../../shared/Images";
 import type { IProduct } from "../../shared/types";
-import type { IProbs } from "./types";
-import styles from "./viewProducts.module.css";
+import type { IProbs } from "./ViewProductsTypes";
+import styles from "./ViewProducts.module.css";
 import { useNavigate } from "react-router-dom";
 export function ViewProducts(probs:IProbs) {
 	

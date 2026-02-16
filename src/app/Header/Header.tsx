@@ -1,25 +1,26 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 // import Basket from '../../assets/basket.svg'
 import { useMediaQuery } from "react-responsive";
 // import Human from '../../assets/human.svg'
 
-import type{ IProbs } from "./headerTypes";
-import { SVG } from "../../shared/images";
+import type{ IProbs } from "./HeaderTypes";
+import { SVG } from "../../shared";
 import { HeaderContext } from "../../context";
-import { useUserContext } from "../../context/userContext";
+import { useUserContext } from "../../context/useUserContext";
 export function Header(probs: IProbs) {
 	const typeOfHeader = probs.typeOfHeader;
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 	const headerContext = useContext(HeaderContext)
 	const navigate = useNavigate()
 	const userContext = useUserContext()
-	
+
 	function profile() {
 		if (!userContext.user){
 			navigate("/auth")
 		}
+		navigate("/profile")
 	}
 	return (
 		<div
@@ -43,9 +44,9 @@ export function Header(probs: IProbs) {
 							<span className={styles.menuItem}>КОНТАКТИ</span>
 						</nav>
 					)}
-					<div className={styles.logoDiv}>
-						<SVG.HeaderDrones className={styles.dronesLogo} />
-					</div>
+						<Link className={styles.logoDiv} to="/">
+							<SVG.HeaderDrones className={styles.dronesLogo} />
+						</Link>
 					<div className={styles.actions}>
 						<SVG.Basket className={styles.Icons} />
 						<SVG.Human className={styles.Icons} onClick={profile}/>

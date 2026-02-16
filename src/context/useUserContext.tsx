@@ -1,12 +1,14 @@
-import {createContext, type ReactNode, useContext, useEffect, useState } from "react"
+import {createContext, useContext, useEffect, useState } from "react"
 // import { useRegister } from "../hooks/useRegister"
 import type { IUser, LoginCredentials, RegisterCredentials } from "../shared/types"
+import { isNullOrUndefined } from "util"
 
 
 export interface IHeaderContract {
     user:IUser | null
     registration:(registerData: RegisterCredentials) => Promise<boolean | string>
     login:(registerData: LoginCredentials) => Promise<boolean | string>
+    logout: () => void
 }
 interface IProps {
     children:React.ReactNode
@@ -86,6 +88,11 @@ export function UserContextWrapper(props:IProps) {
             return "Network error";
         }
     }
+    async function logout() {
+        localStorage.removeItem("token")
+        setToken("")
+        setUser(null)
+    }
     useEffect(() => {
         if (!token) return;
         me();
@@ -98,7 +105,7 @@ export function UserContextWrapper(props:IProps) {
     }, []);
 
     return (
-        <UserContext value={{ user, registration, login }}>
+        <UserContext value={{ user, registration, login, logout }}>
             {children}
         </UserContext>
     );

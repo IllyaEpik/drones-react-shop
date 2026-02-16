@@ -4,25 +4,22 @@ import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
 import { Home } from "../HomePage";
 import styles from "./Auth.module.css";
-import { UserContext, useUserContext } from "../../context/userContext";
-import type{ AuthCredentials,RegisterCredentials } from "../../shared/types";
+import {useUserContext } from "../../context/useUserContext";
+import type{ AuthCredentials,RegisterCredentials } from "../../shared";
 import { AuthToggle } from "../../components/AuthToggle/AuthToggle";
 // import { AuthCredentials } from "../../shared/types/dbTypes";
 
 export function Auth() {
   	const [mode, setMode] = useState<"login" | "register">("register");
 	const navigate = useNavigate()
-	const userContext = useContext(UserContext)
 	const {handleSubmit, register, formState: {errors}} = useForm<AuthCredentials>()
     const {registration,login,user} = useUserContext()
-	
+
 	useEffect(() => {
 		if (!user) return
-		
 		navigate("/")
 	},[user])
 
-	if (!userContext) return null
 	const emailError = errors.email?.message
 	const passwordError = errors.password?.message
 	const rootError = errors.root?.message
@@ -45,7 +42,8 @@ export function Auth() {
 			setMode("login")
 			return null
 		}
-		// navigate(to="/forgotPassword")
+
+		navigate("/reset-password")
 	}
 	return (
 		<>

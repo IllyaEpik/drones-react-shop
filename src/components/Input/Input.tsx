@@ -1,39 +1,23 @@
-import { InputHTMLAttributes } from "react";
-import styles from "./input.module.css";
+import type { InputHTMLAttributes } from "react";
+import styles from "./Input.module.css";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
-	label?: string;
-	type?: string;
-	placeholder?: string;
-	value?: string;
-	onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-	
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
+  error?: string;
 }
 
-export function Input(props: InputProps) {
-	const {
-		label,
-		type = "text",
-		placeholder,
-		value,
-		onChange,
-		...other
-	} = props
-	
-	return (
-		<div className={styles.wrapper}>
-			{label && <label htmlFor={placeholder}>{label}</label>}
+export function Input({ label, error, ...rest }: Props) {
+  return (
+    <div className={styles.wrapper}>
+      {label && <label className={styles.label} htmlFor={label}>{label}</label>}
 
-			<input
-				id={placeholder}
-				type={type}
-				placeholder={placeholder}
-				value={value}
-				onChange={onChange}
-				className={styles.input}
-				{...other}
-			/>
+      <input
+        {...rest}
+		id={label}
+        className={`${styles.input} ${error ? styles.errorInput : ""}`}
+      />
 
-		</div>
-	);
+      {error && <span className={styles.error}>{error}</span>}
+    </div>
+  );
 }

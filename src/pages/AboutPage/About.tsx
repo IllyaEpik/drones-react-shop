@@ -1,4 +1,4 @@
-import { PNG } from "../../shared/images";
+import { PNG } from "../../shared";
 import styles from "./About.module.css";
 export function About() {
 	return (<div>

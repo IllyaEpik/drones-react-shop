@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { SVG } from "../../shared/images";
+import { SVG } from "../../shared";
 import styles from "./Footer.module.css";
 import { useMediaQuery } from "react-responsive";
 
