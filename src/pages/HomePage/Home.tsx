@@ -1,12 +1,12 @@
 import styles from './Home.module.css';
-<<<<<<< HEAD
+
 import droneImg from '../../assets/drone.png';
-=======
-import droneImg from '../../assets/drone.png'; 
+
+
 import { useProduct } from '../../hooks/useProduct';
 import { useState } from 'react';
 import { ViewProducts } from '../../components';
->>>>>>> 92389058f635f95bcfc0d99683b4d8a859639315
+
 
 export function Home(){
   const [take, setTake] = useState(10)
