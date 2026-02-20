@@ -2,6 +2,8 @@ export interface ContactCredentials {
 	lastName?: string;
     name?: string;
 	fatherName?: string
-	phone?:string
+	phoneNumber?:string
     email?:string
+	// year?:string
 }
+// export interface 

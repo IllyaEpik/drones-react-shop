@@ -1,7 +1,6 @@
 import {createContext, useContext, useEffect, useState } from "react"
 // import { useRegister } from "../hooks/useRegister"
-import type { IUser, LoginCredentials, RegisterCredentials } from "../shared/types"
-import { isNullOrUndefined } from "util"
+import type { ContactCredentials, IUser, LoginCredentials, RegisterCredentials } from "../shared/types"
 
 
 export interface IHeaderContract {
@@ -9,6 +8,7 @@ export interface IHeaderContract {
     registration:(registerData: RegisterCredentials) => Promise<boolean | string>
     login:(registerData: LoginCredentials) => Promise<boolean | string>
     logout: () => void
+    update: (contactData:ContactCredentials) => void
 }
 interface IProps {
     children:React.ReactNode
@@ -80,10 +80,31 @@ export function UserContextWrapper(props:IProps) {
             });
             const result = await response.json();
             if (response.status === 404) {
-                return result.message;
+                return result;
             }
             
             setUser(result);
+        } catch {
+            return "Network error";
+        }
+    }
+    async function update(data:ContactCredentials) {
+        try {
+            const response = await fetch("http://localhost:8000/user", {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`
+                },
+                method:"PATCH",
+                body:JSON.stringify(data)
+            });
+            const result = await response.json();
+            if (response.status !== 200) {
+                return result;
+            }
+            
+            setUser(result);
+            return result
         } catch {
             return "Network error";
         }
@@ -105,7 +126,7 @@ export function UserContextWrapper(props:IProps) {
     }, []);
 
     return (
-        <UserContext value={{ user, registration, login, logout }}>
+        <UserContext value={{ user, registration, login, logout, update }}>
             {children}
         </UserContext>
     );

@@ -58,8 +58,8 @@
     color: #9EA0AA;
     font-family: "GTWalsheimPro";
     text-transform: uppercase;
-    ;
     padding: 10px 20px;
     background-color: white;
     border-radius: 100px;
+    cursor: pointer;
 }

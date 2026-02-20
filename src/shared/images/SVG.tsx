@@ -13,6 +13,7 @@ import { ReactComponent as Order } from "../../assets/svg/order.svg";
 import { ReactComponent as RightArrow } from "../../assets/svg/rightArrow.svg";
 import { ReactComponent as SkipNextFilled } from "../../assets/svg/SkipNextFilled.svg";
 import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPreviousFilled.svg";
+import { ReactComponent as Exit } from "../../assets/svg/exit.svg";
 
 export const SVG = {
 	HeaderDrones,
@@ -25,7 +26,8 @@ export const SVG = {
 	Order,
 	SkipPreviousFilled,
 	SkipNextFilled,
-	BasketButton
+	BasketButton,
+	Exit
 };
 export const Blocks = {
 	centerBlock,

@@ -1,8 +1,8 @@
 @font-face {
 	font-family: "GTWalsheimPro";
 	src: url("../../assets/font/GTWalsheimPro.ttf") format("truetype");
-	font-weight: 900;
-	font-style: bold;
+	/* font-weight: 900; */
+	/* font-style: bold; */
 }
 @font-face {
 	font-family: "GTWalsheimProBold";
@@ -12,6 +12,11 @@
 @font-face {
 	font-family: "GTWalsheimProBoldStyle";
 	src: url("../../assets/font/bold.woff2") format("woff2");
+	/* font-weight: 900; */
+}
+@font-face {
+	font-family: "GTWalsheimPro500";
+	src: url("../../assets/font/medium.woff2") format("woff2");
 	/* font-weight: 900; */
 }
 .page {
