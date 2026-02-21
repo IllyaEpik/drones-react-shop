@@ -1,21 +1,25 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Main } from "../Main";
 
 import type{ IProbs } from "./LayoutTypes";
 import styles from "./Layout.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Modal } from "../../components/Modal";
 import { Input } from "../../components/Input";
 import { HeaderContextWrapper } from "../../context";
 import { UserContextWrapper } from "../../context/useUserContext";
 
 export function Layout(probs: IProbs) {
-  const { typeOfHeader, typeOfFooter } = probs;
+	const { typeOfHeader, typeOfFooter } = probs;
 
-  const [open, setOpen] = useState(false);
+	const [open, setOpen] = useState(false);
+	const { pathname } = useLocation();
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
   return (
     <div className={styles.page}>
 		<UserContextWrapper>

@@ -41,7 +41,11 @@ export function Header(probs: IProbs) {
 									ПРО НАС
 								</Link>
 							</span>
-							<span className={styles.menuItem}>КОНТАКТИ</span>
+							<span className={styles.menuItem}>
+								<Link to="/contacts" className={styles.link}>
+									КОНТАКТИ
+								</Link>
+							</span>
 						</nav>
 					)}
 						<Link className={styles.logoDiv} to="/">

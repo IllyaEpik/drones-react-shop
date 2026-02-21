@@ -1,3 +1,15 @@
+// <<<<<<< HEAD
+// =======
+// import styles from './Home.module.css';
+
+// import droneImg from '../../assets/drone.png';
+
+
+// import { useProduct } from '../../hooks/useProduct';
+// import { useState } from 'react';
+// import { ViewProducts } from '../../components';
+
+// >>>>>>> origin/Contact
 
 import { ViewProducts } from "../../components/ViewProducts";
 import { Card } from "../../components/Card";

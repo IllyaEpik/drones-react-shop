@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 140.16px;
 	left: 50%;
-	transform: translateX(-50%) rotate(11deg);
+	transform: translateX(-50%);
 	z-index: 9999;
 	width: 811.6474603654409px;
 	margin-bottom: 200px;

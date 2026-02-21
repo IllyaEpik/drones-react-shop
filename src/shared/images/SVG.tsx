@@ -15,6 +15,16 @@ import { ReactComponent as SkipNextFilled } from "../../assets/svg/SkipNextFille
 import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPreviousFilled.svg";
 import { ReactComponent as Exit } from "../../assets/svg/exit.svg";
 
+
+import { ReactComponent as TgIcon } from "../../assets/svg/tg.svg";
+import { ReactComponent as Inst } from "../../assets/svg/inst.svg";
+import { ReactComponent as Face} from "../../assets/svg/face.svg";
+
+import { ReactComponent as Celendar } from "../../assets/svg/celendar.svg";
+import { ReactComponent as MapPin } from "../../assets/svg/BsPinMapFill.svg";
+import { ReactComponent as Mail} from "../../assets/svg/mail.svg";
+import { ReactComponent as Phone} from "../../assets/svg/phone.svg";
+
 export const SVG = {
 	HeaderDrones,
 	FooterDrones,
@@ -29,6 +39,17 @@ export const SVG = {
 	BasketButton,
 	Exit
 };
+export const ContactsIcons = {
+	TgIcon,
+	Inst,
+	Face,
+	 
+	Celendar,
+	MapPin,
+	Mail,
+	Phone
+
+}
 export const Blocks = {
 	centerBlock,
 	leftBlock,

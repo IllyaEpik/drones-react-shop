@@ -1,4 +1,4 @@
-export { Blocks, SVG } from "./SVG";
+export { Blocks, SVG, ContactsIcons } from "./SVG";
 
 export { BETA, PNG } from "./PNG";
 

@@ -8,6 +8,7 @@ import { Product } from "../pages/ProductPage";
 import { ResetPassword } from "../pages/ResetPsswordPage/ResetPassword";
 import { Layout } from "./Layout";
 import { Profile } from "../pages/ProfilePage";
+import { Contacts } from "../pages/ContactPage";
 
 
 export function AppRoutes() {
@@ -27,6 +28,7 @@ export function AppRoutes() {
 			<Route path="/about" element={<About />} />
 			<Route path="/profile" element={<Profile />} />
 			<Route path="/catalog" element={<Catalog />} />
+			<Route path="/contacts" element={<Contacts />} />
 			
 		</Route>
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ViewProducts } from "../../components/ViewProducts";
 import { useCountProduct } from "../../hooks";
 import { BETA, SVG } from "../../shared";
@@ -18,6 +18,9 @@ export function Catalog() {
 		}
 	]
 	const [currentPage, setCurrentPage] = useState(1)
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [currentPage]);
 
 	const [countOfProducts,loading,error,update,categoryId] = useCountProduct("all")
 
