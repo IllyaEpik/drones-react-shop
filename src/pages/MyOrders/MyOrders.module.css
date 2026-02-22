@@ -1,0 +1,8 @@
+.wrapper{
+    display: flex;
+    width: 90%;
+    padding: 5%;
+    padding-top: 1%;
+    height: 100vh;
+    gap: 20%;
+}

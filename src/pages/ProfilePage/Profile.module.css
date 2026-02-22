@@ -1,54 +1,10 @@
-.sideInfo{
-    width: 321px;
-    /* height: 322px; */
-
-    /* top: 251px; */
-    /* left: 40px; */
-    display: flex;
-    flex-direction: column;
-    /* opacity: 1; */
-    gap: 44px;
-    height: 100%;
-
-}
 .wrapper{
     display: flex;
     width: 90%;
-    /* justify-content: space-between; */
     padding: 5%;
     padding-top: 1%;
     height: 100vh;
     gap: 20%;
-}
-.title{
-    font-family: "GTWalsheimPro";
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 100%;
-    letter-spacing: 3%;
-    text-transform: uppercase;
-
-}
-.line{
-    border: #CDD5DD solid 1px;
-    height: 0;
-    width: 100%;
-}
-.menuItem{
-    font-family: "GTWalsheimPro";
-    font-weight: 500;
-    font-style: Medium;
-    color: #9EA0AA;
-    font-size: 14px;
-    line-height: 100%;
-    cursor: pointer;
-    letter-spacing: 9%;
-    text-transform: uppercase;
-
-}
-.selected{
-    cursor: auto;
-    color: #0C122A;
 }
 .form{
     width: 668px;

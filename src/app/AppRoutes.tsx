@@ -9,6 +9,8 @@ import { ResetPassword } from "../pages/ResetPsswordPage/ResetPassword";
 import { Layout } from "./Layout";
 import { Profile } from "../pages/ProfilePage";
 import { Contacts } from "../pages/ContactPage";
+import { MyOrders } from "../pages/MyOrders/MyOrders";
+import { DeliveryAddresses } from "../pages/DeliveryAddresses";
 
 
 export function AppRoutes() {
@@ -27,6 +29,8 @@ export function AppRoutes() {
 		<Route element={<Layout typeOfFooter={1} typeOfHeader={0}/>}>
 			<Route path="/about" element={<About />} />
 			<Route path="/profile" element={<Profile />} />
+			<Route path="/my-orders" element={<MyOrders />} />
+			<Route path="/delivery-addresses" element={<DeliveryAddresses />} />
 			<Route path="/catalog" element={<Catalog />} />
 			<Route path="/contacts" element={<Contacts />} />
 			

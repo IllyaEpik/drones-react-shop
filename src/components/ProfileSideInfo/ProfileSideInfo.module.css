@@ -1,0 +1,38 @@
+
+.sideInfo{
+    width: 321px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+
+}
+.title{
+    font-family: "GTWalsheimPro";
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+}
+.line{
+    border: #CDD5DD solid 1px;
+    height: 0px;
+    width: 100%;
+}
+.menuItem{
+    font-family: "GTWalsheimPro500";
+    font-weight: 500;
+    font-style: Medium;
+    color: #9EA0AA;
+    font-size: 14px;
+    line-height: 100%;
+    cursor: pointer;
+    letter-spacing: 9%;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.selected{
+    cursor: auto;
+    color: #0C122A;
+}

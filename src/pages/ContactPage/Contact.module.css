@@ -2,6 +2,10 @@
   margin: 0 2.5%;
   width: 95%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 45%;
+  /* gap: 25px; */
 }
 
 .title {
@@ -10,13 +14,22 @@
 	font-family: "GTWalsheimProBold";
 	color: #CDD5DD;
 	font-size: 44px;
+	margin-top: 10px;
+	margin-bottom: 50px;
+	font-weight: 900;
+	line-height: 100%;
+	letter-spacing: 3%;
+	text-align: center;
+	text-transform: uppercase;
+
+
 }
 
 .container {
 	width: 100%;
 	justify-content: space-between; 
 	display: flex;
-	gap: 20%;
+	gap: 11%;
 	left: 0;
 	top: 0;
 	text-align: left;
@@ -32,7 +45,15 @@
 	gap: 24px;
 
 }
+.data p {
+	font-family: "GTWalsheimPro";
+	color: #6D717F;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 100%;
+	letter-spacing: 0%;
 
+}
 .info h3 {
   /* width: 214;
 height: 24; */
@@ -40,7 +61,7 @@ font-size: 24px;
 	font-weight: 400;
 font-family: "GTWalsheimPro";
 gap: 10px;
-
+margin: 0;
 }
 
 .info p {
@@ -55,20 +76,37 @@ gap: 10px;
 
 .form {
   flex: 1.2;
+  gap: 44px;
+  display: flex;
+  flex-direction: column;
 }
-
+.fields{
+	gap: 16px;
+	display: flex;
+	flex-direction: column;
+}
 .form h3 {
 	
 	font-size: 24px;
 	font-family: "GTWalsheimPro";
 	font-weight: 400;
-  	margin-bottom: 24px;
+	margin: 0;
+  	/* margin-bottom: 24px; */
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 18px;
+  /* margin-bottom: 18px; */
+}
+
+.description::placeholder{
+	color: black;
+	font-family: "GTWalsheimPro";
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 100%;
+
 }
 
 .field label {
@@ -101,25 +139,36 @@ gap: 10px;
 .button {
 	width: 170px;
 	height: 52px;
-
-	gap: 16px;
 	border-radius: 100px;
+	gap: 16px;
 	padding-top: 18px;
 	padding-right: 40px;
 	padding-bottom: 18px;
 	padding-left: 40px;
 
-}
 
+}
+.button span{
+	font-family: "GTWalsheimProBoldStyle";
+	font-weight: 700;
+	font-style: Bold;
+	font-size: 14px;
+	line-height: 100%;
+	letter-spacing: 9%;
+	text-transform: uppercase;
+
+}
 
 .socials {
   	width: fit-content;
 	height: 71px;
 	gap: 24px;
+	display: flex;
+	flex-direction: column;
 }
 .icons{
 	justify-content: space-between;
-
+	
 	display: flex;
 
 }
