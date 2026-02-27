@@ -11,6 +11,7 @@ import { Profile } from "../pages/ProfilePage";
 import { Contacts } from "../pages/ContactPage";
 import { MyOrders } from "../pages/MyOrders/MyOrders";
 import { DeliveryAddresses } from "../pages/DeliveryAddresses";
+import { ConfrimResetPassword } from "../pages/ConfirmResetPsswordPage";
 
 
 export function AppRoutes() {
@@ -23,6 +24,7 @@ export function AppRoutes() {
 			<Route path="/product/:id" element={<Product />} />
 			<Route path="*" element={<NotFound />} />
 			<Route path="/reset-password" element={<ResetPassword />} />
+			<Route path="/confirm-password-change/:token" element={<ConfrimResetPassword />} />
 			
 		</Route>
 		

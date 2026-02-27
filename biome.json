@@ -18,6 +18,7 @@
 			"recommended": true,
 			"correctness": {
 				"useExhaustiveDependencies": "off"
+				
 			},
 			"a11y": {
 				"useGenericFontNames": "off",

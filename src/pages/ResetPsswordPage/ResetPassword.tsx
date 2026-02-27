@@ -1,38 +1,37 @@
 import { useNavigate } from "react-router-dom";
 import { Input } from "../../components/Input";
-import styles from "./ResetPssword.module.css";
 import { Home } from "../HomePage";
+import styles from "./ResetPssword.module.css";
+import { Button } from "../../shared";
+import { useChangePassword } from "../../hooks/useChangePassword";
+import type{ IReset } from "./ResetPasswordTypes";
+import { useForm } from "react-hook-form";
 
 export function ResetPassword() {
-  const navigate = useNavigate();
+	const navigate = useNavigate();
+	const {handleSubmit, register, formState: {errors}} = useForm<IReset>()
+	const [data,loading,error,onSubmit] = useChangePassword()
+	return (
+		<>
+			<Home/>
+			<div className={styles.wrapper}>
+				<form className={styles.card}  onSubmit={handleSubmit((data) => onSubmit(data.email))}>
+					<div className={styles.header}>
+					<h3>Відновлення пароля</h3>
+					<button onClick={() => navigate("/")} type="button">✕</button>
+					</div>
 
-  return (
-	<>
-		<Home/>
-		<div className={styles.wrapper}>
-			<div className={styles.card}>
-				<div className={styles.header}>
-				<h3>Відновлення пароля</h3>
-				<button onClick={() => navigate("/")} type="button">✕</button>
-				</div>
+					<Input label="Email" placeholder="Введіть email" {...register("email")} />
 
-				<Input label="Email" placeholder="Введіть email" />
+					<div className={styles.actions}>
+					<Button to="/" black={false} img={false} className={styles.cancel}>Скасувати</Button>
 
-				<div className={styles.actions}>
-				<button
-					className={styles.cancel}
-					onClick={() => navigate("/")}
-					type="button"
-				>
-					Скасувати
-				</button>
-
-				<button className={styles.submit} type="submit">
-					Надіслати лист
-				</button>
-				</div>
+					<button className={`${styles.submit} ${loading && styles.loading}`} type="submit">
+						Надіслати лист
+					</button>
+					</div>
+				</form>
 			</div>
-		</div>
-	</>
+		</>
   );
 }

@@ -7,6 +7,7 @@ import { ReactComponent as BasketButton } from "../../assets/svg/basketButton.sv
 import { ReactComponent as Burger } from "../../assets/svg/burger.svg";
 import { ReactComponent as Drone } from "../../assets/svg/drone.svg";
 import { ReactComponent as FooterDrones } from "../../assets/svg/footerDrones.svg";
+import { ReactComponent as Arrow} from "../../assets/svg/arrow.svg";
 import { ReactComponent as HeaderDrones } from "../../assets/svg/headerDrones.svg";
 import { ReactComponent as Human } from "../../assets/svg/human.svg";
 import { ReactComponent as Order } from "../../assets/svg/order.svg";
@@ -14,6 +15,8 @@ import { ReactComponent as RightArrow } from "../../assets/svg/rightArrow.svg";
 import { ReactComponent as SkipNextFilled } from "../../assets/svg/SkipNextFilled.svg";
 import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPreviousFilled.svg";
 import { ReactComponent as Exit } from "../../assets/svg/exit.svg";
+import { ReactComponent as Car } from "../../assets/svg/car.svg";
+import { ReactComponent as Copy } from "../../assets/svg/copy.svg";
 
 
 import { ReactComponent as TgIcon } from "../../assets/svg/tg.svg";
@@ -37,7 +40,10 @@ export const SVG = {
 	SkipPreviousFilled,
 	SkipNextFilled,
 	BasketButton,
-	Exit
+	Exit,
+	Car,
+	Copy,
+	Arrow
 };
 export const ContactsIcons = {
 	TgIcon,
