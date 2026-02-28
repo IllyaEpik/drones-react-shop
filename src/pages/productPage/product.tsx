@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { ViewProducts } from "../../components/ViewProducts";
 import { HeaderContext } from "../../context";
 import { useIdProduct } from "../../hooks/useIdProduct";
-import { Button } from "../../shared/Button";
+import { Button } from "../../shared/Button/Button";
 import { BETA, SVG } from "../../shared";
 import styles from "./Product.module.css";
 

@@ -17,8 +17,8 @@ import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPrevi
 import { ReactComponent as Exit } from "../../assets/svg/exit.svg";
 import { ReactComponent as Car } from "../../assets/svg/car.svg";
 import { ReactComponent as Copy } from "../../assets/svg/copy.svg";
-
-
+import { ReactComponent as kil } from "../../assets/svg/kil.svg";
+import { ReactComponent as dol } from "../../assets/svg/dol.svg";
 import { ReactComponent as TgIcon } from "../../assets/svg/tg.svg";
 import { ReactComponent as Inst } from "../../assets/svg/inst.svg";
 import { ReactComponent as Face} from "../../assets/svg/face.svg";
@@ -27,7 +27,8 @@ import { ReactComponent as Celendar } from "../../assets/svg/celendar.svg";
 import { ReactComponent as MapPin } from "../../assets/svg/BsPinMapFill.svg";
 import { ReactComponent as Mail} from "../../assets/svg/mail.svg";
 import { ReactComponent as Phone} from "../../assets/svg/phone.svg";
-
+import { ReactComponent as Np} from "../../assets/svg/np.svg";
+import { ReactComponent as Payment} from "../../assets/svg/payment.svg";
 export const SVG = {
 	HeaderDrones,
 	FooterDrones,
@@ -43,7 +44,11 @@ export const SVG = {
 	Exit,
 	Car,
 	Copy,
-	Arrow
+	Arrow,
+	Np,
+	Payment,
+	kil,
+	dol
 };
 export const ContactsIcons = {
 	TgIcon,

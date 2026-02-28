@@ -12,7 +12,7 @@ import { Contacts } from "../pages/ContactPage";
 import { MyOrders } from "../pages/MyOrders/MyOrders";
 import { DeliveryAddresses } from "../pages/DeliveryAddresses";
 import { ConfrimResetPassword } from "../pages/ConfirmResetPsswordPage";
-
+import { Checkout } from "../pages/CheckoutPage";
 
 export function AppRoutes() {
   return (
@@ -35,6 +35,8 @@ export function AppRoutes() {
 			<Route path="/delivery-addresses" element={<DeliveryAddresses />} />
 			<Route path="/catalog" element={<Catalog />} />
 			<Route path="/contacts" element={<Contacts />} />
+			<Route path="/checkout" element={<Checkout />} />
+			
 			
 		</Route>
 

@@ -12,7 +12,7 @@ import drone from "../../assets/beta/drone.png";
 export const PNG = {
 	people,
 	tower,
-	room
+	room,
 	
 };
 export const BETA = {

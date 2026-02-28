@@ -1,0 +1,269 @@
+.page {
+width: 668;
+height: 1651;
+top: 227px;
+left: 40px;
+gap: 44px;
+
+opacity: 1;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;          
+  gap: 60px;
+  align-items: flex-start;
+}
+
+
+.left {
+
+    width: 668;
+    height: 1573;
+    gap: 24px;
+
+    opacity: 1;
+
+}
+
+.title {
+  width: 668px;
+  height: 34px;
+}
+
+.block {
+width: 668;
+height: 524;
+gap: 16px;
+
+opacity: 1;
+
+
+}
+
+.block h3 {
+width: 668;
+height: 27;
+
+opacity: 1;
+
+}
+
+
+.field {
+  display: flex;          
+  flex-direction: column;
+ width: 668;
+height: 64;
+gap: 15px;
+
+opacity: 1;
+
+}
+
+.field input,
+.field textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #0b0f24;
+  box-shadow: 0 0 0 2px rgba(11,15,36,0.08);
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+
+.radioItem {
+
+width: 668;
+height: 44;
+gap: 30px;
+
+opacity: 1;
+border-width: 1px;
+padding-top: 7px;
+padding-right: 16px;
+padding-bottom: 7px;
+padding-left: 16px;
+border: 1px solid var(--Blue-20, #CED0D4)
+
+}
+.radioItem span{
+    width: 153;
+height: 17;
+opacity: 1;
+
+}
+
+.right {
+width: 668px;
+height: 1028px;
+top: 227px;
+left: 732px;
+opacity: 1;
+border-width: 1px;
+border-radius: 10px;
+
+}
+
+.product {
+  display: flex;          
+  gap: 16px;
+  align-items: center;
+}
+
+.product img {
+  border-radius: 10px;
+}
+
+.summary {
+  display: flex;          
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.summary div {
+  display: flex;          
+  justify-content: space-between;
+}
+
+.confirm {
+  background: #0b0f24;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.confirm:hover {
+  opacity: 0.85;
+}
+.Delblock{
+    display: flex;
+    width: 668;
+height: 412;
+gap: 16px;
+flex-direction: column;
+opacity: 1;
+
+}
+.Delblock h3{
+    width: 668;
+height: 27;
+
+opacity: 1;
+
+}
+.DelImg{
+    width: 20.27536392211914;
+height: 19.99997329711914;
+
+opacity: 1;
+
+}
+.Delinput{
+    width: 300;
+height: 30;
+gap: 20px;
+
+opacity: 1;
+
+}
+.Payment{
+    width: 246.00003051757812;
+    height: 32;
+    gap: 10px;
+
+    opacity: 1;
+
+}
+.Ma{
+
+    width: 90;
+height: 17;
+
+opacity: 1;
+
+}
+.npExtra{
+    width: 668;
+height: 232;
+gap: 16px;
+
+opacity: 1;
+border-width: 1px;
+padding-top: 7px;
+padding-right: 16px;
+padding-bottom: 16px;
+padding-left: 16px;
+border: 1px solid var(--Blue-80, #3D4155)
+}
+.npExtr{
+    width: 668;
+height: 232;
+gap: 16px;
+
+opacity: 1;
+border-width: 1px;
+padding-top: 7px;
+padding-right: 16px;
+padding-bottom: 16px;
+padding-left: 16px;
+border: 1px solid var(--Blue-80, #3D4155)
+}
+.Mark{
+    width: 668;
+height: 27;
+
+opacity: 1;
+
+}
+.npExtras{
+    width: 668;
+height: 239;
+gap: 16px;
+
+opacity: 1;
+border-width: 1px;
+padding-top: 7px;
+padding-right: 16px;
+padding-bottom: 16px;
+padding-left: 16px;
+border: 1px solid var(--Blue-80, #3D4155)
+}
+.ame{
+    width: 300;
+height: 30;
+gap: 20px;
+
+opacity: 1;
+
+}
+.Butdel{
+    width: 144;
+height: 41;
+gap: 12px;
+
+opacity: 1;
+border-width: 1.5px;
+padding-top: 12px;
+padding-right: 16px;
+padding-bottom: 12px;
+padding-left: 16px;
+border-radius: 100px;
+
+}
