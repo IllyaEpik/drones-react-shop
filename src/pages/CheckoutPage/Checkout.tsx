@@ -1,7 +1,7 @@
 import styles from "./Checkout.module.css";
 import { SVG } from "../../shared";
 import { useState } from "react";
-import { PNG } from "../../shared";
+
 export function Checkout() {
 const [showDepartment, setShowDepartment] = useState(false);
 const [delivery, setDelivery] = useState("");
