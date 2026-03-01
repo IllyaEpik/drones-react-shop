@@ -17,6 +17,9 @@ import { ReactComponent as SkipPreviousFilled } from "../../assets/svg/SkipPrevi
 import { ReactComponent as Exit } from "../../assets/svg/exit.svg";
 import { ReactComponent as Car } from "../../assets/svg/car.svg";
 import { ReactComponent as Copy } from "../../assets/svg/copy.svg";
+import { ReactComponent as Trash } from "../../assets/svg/Trash.svg";
+import { ReactComponent as Minus } from "../../assets/svg/minus.svg";
+import { ReactComponent as Plus } from "../../assets/svg/plus.svg";
 
 
 import { ReactComponent as TgIcon } from "../../assets/svg/tg.svg";
@@ -43,7 +46,10 @@ export const SVG = {
 	Exit,
 	Car,
 	Copy,
-	Arrow
+	Arrow,
+	Trash,
+	Plus,
+	Minus
 };
 export const ContactsIcons = {
 	TgIcon,

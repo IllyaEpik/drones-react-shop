@@ -5,12 +5,14 @@ import type { IProduct } from "../../shared/types";
 import type { IProbs } from "./ViewProductsTypes";
 import styles from "./ViewProducts.module.css";
 import { useNavigate } from "react-router-dom";
+import { useBasketContext } from "../../context";
 export function ViewProducts(probs:IProbs) {
 	
 	const {pages,categoryId, skip} = probs
 	console.log(skip,213132231)
 	const [staticProducts, setStaticProducts] = useState<IProduct[]>([]);
 	const [products, loading, error, update, info] = useProduct(probs.count, skip ? skip : 0, "new",categoryId);
+	const {addProduct} = useBasketContext()
 	const navigate = useNavigate()
 	useEffect(() => {
 		update.setSkip(skip || 0);
@@ -45,7 +47,10 @@ export function ViewProducts(probs:IProbs) {
 
 								<span className={styles.price}>{product.price}₴</span>
 							</div>
-							<SVG.BasketButton className={styles.basketButton}/>
+							<SVG.BasketButton 
+								className={styles.basketButton}
+								onClick={() => addProduct(product.id)}
+							/>
 						</button>
 					);
 				})}

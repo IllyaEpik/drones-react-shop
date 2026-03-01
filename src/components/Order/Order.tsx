@@ -40,6 +40,7 @@ export function Order() {
                         <SVG.Copy className={styles.copy}/>
                     </div>
                     <div className={styles.path}>
+                        <div className={styles.lightLine}/>
                         <div className={styles.line}></div>	
                         <div className={styles.points}>
                             <div className={`${styles.point} ${styles.pointWithCar}`}>
@@ -50,6 +51,14 @@ export function Order() {
                             <div className={styles.point}></div>
                             <div className={styles.point}></div>
                         </div>
+                        {/* <div className={styles.lines}>
+                            <div className={`${styles.lightLine} ${styles.usualLine}`}>
+                            </div>
+                            <div className={styles.usualLine}></div>
+                            <div className={styles.usualLine}></div>
+                            <div className={styles.usualLine}></div>
+                            <div className={styles.usualLine}></div>
+                        </div> */}
                     </div>
                     <div className={styles.statuses	}>
                         <span>Оформлено</span>
@@ -92,8 +101,8 @@ export function Order() {
                                         <span className={styles.price}>29 990 ₴</span>
                                         <span className={styles.discount}>28 985₴</span>
                                     </div></div>
-                                    <div className={styles.box}><span>1</span></div>
-                                    <div className={styles.box}><span>28 985₴  </span></div>
+                                    <div className={`${styles.box} ${styles.countBox}`}><span>1</span></div>
+                                    <div className={`${styles.box} ${styles.lastBox}`}><span>28 985₴  </span></div>
                                 </div>
                             </header>
                             <main className={styles.finalData}>

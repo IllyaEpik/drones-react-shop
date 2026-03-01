@@ -1,0 +1,30 @@
+
+.productArray{
+	height: 379px;
+	overflow-y: scroll;
+  overflow-x:visible;
+}
+.orderInfo{
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.order{
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.buttons{
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  /* margin-top: 16px; */
+}
+.whiteButton{
+    border: 1px solid black;
+}
+.modal{
+  top: 15%;
+  right: 4%;
+  /* left: auto ; */
+}

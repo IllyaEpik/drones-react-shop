@@ -27,15 +27,27 @@ export function Footer() {
 			
 			<SVG.FooterDrones className={`${styles.drones} ${isTabletOrMobile && styles.phoneDrones}`}/>
 			<ul className={styles.menu}>
-				<li>Каталог</li>
+				<li>
+					<Link to="/catalog" className={styles.link}>
+						Каталог
+					</Link>
+					</li>
 				<li className={styles.link}>
 					<Link to="/about" className={styles.link}>
 						Про нас
 					</Link>
 				</li>
-				<li>Контакти</li>
+				<li>
+					<Link to="/contacts" className={styles.link}>
+						Контакти
+					</Link>
+				</li>
 				<li>Кошик</li>
-				<li>Кабінет</li>
+				<li>
+					<Link to="/profile" className={styles.link}>
+						Кабінет
+					</Link>
+				</li>
 			</ul>
 
 			<div className={styles.copy}>© 2025 Drones Всі права захищені.</div>

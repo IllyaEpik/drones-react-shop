@@ -1,13 +1,15 @@
 
-import { HeaderContextWrapper, UserContextWrapper } from "../context";
+import { BasketContextWrapper, HeaderContextWrapper, UserContextWrapper } from "../context";
 import { AppRoutes } from "./AppRoutes";
 
 export function App() {
     return (
-            <UserContextWrapper>
-                <HeaderContextWrapper>
-                    <AppRoutes/>
-                </HeaderContextWrapper>
-            </UserContextWrapper>
+            <BasketContextWrapper>
+                <UserContextWrapper>
+                    <HeaderContextWrapper>
+                        <AppRoutes/>
+                    </HeaderContextWrapper>
+                </UserContextWrapper>
+            </BasketContextWrapper>
             )
 }

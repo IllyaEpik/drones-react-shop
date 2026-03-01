@@ -6,4 +6,5 @@ export interface IProbs{
     className?:string
     id?:string,
     type?:"button" | "submit" | "reset" | undefined
+    onclick?: () => void
 }

@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
 import { ViewProducts } from "../../components/ViewProducts";
-import { HeaderContext } from "../../context";
+import { HeaderContext, useBasketContext } from "../../context";
 import { useIdProduct } from "../../hooks/useIdProduct";
 import { Button } from "../../shared/Button";
 import { BETA, SVG } from "../../shared";
@@ -14,7 +14,7 @@ export function Product(){
     const {id} = useParams<{ id: string }>()
     console.log(id,useParams<{ id: string }>())
     const [product, loading, error] = useIdProduct(Number(id))
-    
+    const {addProduct} = useBasketContext()
     const headerContext = useContext(HeaderContext)
 
     useEffect(() => {
@@ -40,7 +40,10 @@ export function Product(){
                         </div>
                     </div>
                     <div className={styles.innerSideInfo}>
-                        <SVG.Order />
+                        <SVG.Order 
+                            className={styles.addProductButton}
+                            onClick={() => addProduct(product.id)}
+                        />
                         <Button to="makeOrder/" img={true} black={true}>Замовити</Button>
                     </div>
                 </div>

@@ -22,7 +22,10 @@
 	overflow: hidden;
 	top: -123px;
 }
-
+.addProductButton{
+    cursor: pointer;
+    z-index: 901;
+}
 .sideInfo{
     position: fixed;
 	/* top: 57%; */

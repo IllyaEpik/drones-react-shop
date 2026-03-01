@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./Header.module.css";
 // import Basket from '../../assets/basket.svg'
@@ -7,21 +7,24 @@ import { useMediaQuery } from "react-responsive";
 
 import type{ IProbs } from "./HeaderTypes";
 import { SVG } from "../../shared";
-import { HeaderContext } from "../../context";
+import { HeaderContext, useBasketContext } from "../../context";
 import { useUserContext } from "../../context/useUserContext";
+import { BasketModal } from "../../components/BasketModal";
 export function Header(probs: IProbs) {
 	const typeOfHeader = probs.typeOfHeader;
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });
 	const headerContext = useContext(HeaderContext)
 	const navigate = useNavigate()
 	const userContext = useUserContext()
-
+	const {productsFromBasket} = useBasketContext()
+	const [isOpen, setIsOpen] = useState<boolean>(false)
 	function profile() {
 		if (!userContext.user){
 			navigate("/auth")
 		}
 		navigate("/profile")
 	}
+	const onClose = () => setIsOpen(!isOpen)
 	return (
 		<div
 			className={`${styles.headerContainer} ${typeOfHeader !== 1 && styles.whiteHeaderContainer}`}
@@ -52,7 +55,10 @@ export function Header(probs: IProbs) {
 							<SVG.HeaderDrones className={styles.dronesLogo} />
 						</Link>
 					<div className={styles.actions}>
-						<SVG.Basket className={styles.Icons} />
+						<div className={styles.basketDiv}>
+							<SVG.Basket className={styles.Icons} onClick={onClose} />
+							{productsFromBasket.length > 0 && <div className={styles.basketNumber} onClick={onClose} >{productsFromBasket.length}</div>}
+						</div>
 						<SVG.Human className={styles.Icons} onClick={profile}/>
 						{isTabletOrMobile && <SVG.Burger className={styles.Icons} />}
 					</div>
@@ -67,7 +73,7 @@ export function Header(probs: IProbs) {
 
 				</div>
 			}
-			
+			<BasketModal open={isOpen} onClose={onClose}/>
 		</div>
 	);
 }

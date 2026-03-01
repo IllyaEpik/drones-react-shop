@@ -79,9 +79,32 @@
     position: absolute;
     top: 50%;
     width: 92%;
+    z-index: 5;
     padding: 0 4%;
     transform: translateY(-50%);
     align-items: center;
+}
+
+/* .lines{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: 4;
+    transform: translateY(-50%);
+    align-items: center;
+
+}
+.usualLine{
+    width: 100%;
+    height: 6px;
+    background-color: #cdd5dd;
+} */
+.lightLine{
+    background-color: black !important;
+    width: 5%;
+    height: 6px;
 }
 .point{
     border-radius: 100%;
@@ -89,6 +112,7 @@
     border: #CDD5DD 1px solid;
     height: 11px;
     width: 11px;
+    z-index: 5;
 }
 .car{
     width: 18.4px;
@@ -138,6 +162,8 @@
 .infoLine{
     display: flex;
     flex-wrap: nowrap;
+    /* align-items: center; */
+    
     justify-content: space-between;
 }
 .infoLineWithDrone{
@@ -194,9 +220,16 @@
 .box{
     width: 80px;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    /* justify-content: center; */
+    
+    /* text-align: center; */
     align-items: center;
+}
+.countBox{
+    justify-content: center;
+}
+.lastBox{
+    justify-content: right;
 }
 .iconsBlock{
     display: flex;

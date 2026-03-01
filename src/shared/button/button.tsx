@@ -11,11 +11,12 @@ export function Button(probs:IProbs) {
         className,
         id,
         type,
-        black
+        black,
+        onclick
     } = probs
     return (
         <Link to={to} className={styles.link}>
-            <button type={type} id={id && id} className={`${styles.button} ${black && styles.black} ${className && className}`}>
+            <button type={type} id={id && id} className={`${styles.button} ${black && styles.black} ${className && className}`} onClick={onclick}>
                 <span className={styles.span}>{children}</span> 
                 {img && <SVG.RightArrow/>}
             </button>
