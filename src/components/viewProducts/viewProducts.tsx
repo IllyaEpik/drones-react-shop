@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useProduct } from "../../hooks/useProduct";
 import { SVG } from "../../shared/Images";
 import type { IProduct } from "../../shared/types";
-import type { IProbs } from "./ViewProductsTypes";
 import styles from "./ViewProducts.module.css";
 import { useNavigate } from "react-router-dom";
 import { useBasketContext } from "../../context";
-export function ViewProducts(probs:IProbs) {
+import type { IProps } from "./ViewProductsTypes";
+export function ViewProducts(probs:IProps) {
 	
 	const {pages,categoryId, skip} = probs
 	console.log(skip,213132231)

@@ -14,7 +14,6 @@ import { DeliveryAddresses } from "../pages/DeliveryAddresses";
 import { ConfrimResetPassword } from "../pages/ConfirmResetPsswordPage";
 import { Checkout } from "../pages/CheckoutPage";
 
-
 export function AppRoutes() {
   return (
     <BrowserRouter> 
@@ -36,7 +35,8 @@ export function AppRoutes() {
 			<Route path="/delivery-addresses" element={<DeliveryAddresses />} />
 			<Route path="/catalog" element={<Catalog />} />
 			<Route path="/contacts" element={<Contacts />} />
-			<Route path="/checkout/" element={<Checkout />} />
+			<Route path="/checkout" element={<Checkout />} />
+			
 			
 		</Route>
 

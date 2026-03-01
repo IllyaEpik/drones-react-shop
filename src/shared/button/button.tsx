@@ -14,7 +14,7 @@ export function Button(probs:IProbs) {
         black,
         onclick
     } = probs
-    
+
     return (
         <Link to={to} className={styles.link}>
             <button type={type} id={id && id} className={`${styles.button} ${black && styles.black} ${className && className}`} onClick={onclick}>
