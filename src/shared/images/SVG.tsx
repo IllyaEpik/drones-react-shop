@@ -28,6 +28,7 @@ import { ReactComponent as TgIcon } from "../../assets/svg/tg.svg";
 import { ReactComponent as Inst } from "../../assets/svg/inst.svg";
 import { ReactComponent as Face} from "../../assets/svg/face.svg";
 
+import { ReactComponent as Edit } from "../../assets/svg/edit.svg";
 import { ReactComponent as Celendar } from "../../assets/svg/celendar.svg";
 import { ReactComponent as MapPin } from "../../assets/svg/BsPinMapFill.svg";
 import { ReactComponent as Mail} from "../../assets/svg/mail.svg";
@@ -56,7 +57,8 @@ export const SVG = {
 	Np,
 	Payment,
 	kil,
-	dol
+	dol,
+	Edit
 };
 export const ContactsIcons = {
 	TgIcon,

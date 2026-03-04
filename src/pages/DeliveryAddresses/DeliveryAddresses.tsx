@@ -1,4 +1,5 @@
 
+import { AdressBlock } from "../../components/AdressBlock";
 import { ProfileSideInfo } from "../../components/ProfileSideInfo";
 import styles from "./DeliveryAddresses.module.css";
 
@@ -7,7 +8,7 @@ export function DeliveryAddresses() {
 		<div className={styles.wrapper}>
 			<ProfileSideInfo selected="DeliveryAddresses" />
 			<div>
-
+				<AdressBlock/>
 			</div>
 		</div>
 	);

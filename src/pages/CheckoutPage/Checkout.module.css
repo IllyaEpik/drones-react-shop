@@ -251,13 +251,32 @@ opacity: 1;
 }
 .Butdel{
     width: 144;
-height: 41;
-gap: 12px;
-border-width: 1.5px;
-padding-top: 12px;
-padding-right: 16px;
-padding-bottom: 12px;
-padding-left: 16px;
-border-radius: 100px;
+	height: 41;
+	gap: 12px;
+	border-width: 1.5px;
+	padding-top: 12px;
+	padding-right: 16px;
+	padding-bottom: 12px;
+	padding-left: 16px;
+	border-radius: 100px;
 
+}
+.productBackground{
+  	background-color: #F4F4F4;
+	height: 86px;
+	width: 108px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+}
+.productImage{
+	height: 86px;
+	width: 86px;
+}
+.gap{
+	width: 100%;
+	background-color: #CED0D4;
+	height: 1px;
+	margin: 10px;
 }
