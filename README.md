@@ -1,39 +1,39 @@
 # Drones Shop — Інтернет-магазин дронів 
 
-**Короткий опис:**
-Проєкт — навчальний інтернет-магазин дронів, створений на **React + TypeScript**. 
+**Brief description:**
+The project is an educational online drone store built on **React + TypeScript**.
 
 
 
 
 
-## Що всередині
-- Маршрутизація через **react-router-dom**
-- Компонентна структура (Header, Footer, Main, сторінки)
-- Приклад кастомного хука в `src/hooks` та організація сторінок у `src/pages`
+## What's inside
+- Routing via **react-router-dom**
+- Component structure (Header, Footer, Main, pages)
+- Example of a custom hook in `src/hooks` and page organization in `src/pages`
 
 
 
-## Технології які використовують
+
+## Technologies used
 - React
 - TypeScript
 - react-router-dom
 
 
 
-## Запустити проєкт
+## Run the project
 
+1. Clone the repository:
 
-1. Клонувати репозиторій:
+```git clone <repository_URL> cd drones-shop```
 
-   ```git clone <URL_репозиторія> cd drones-shop```
+2. Install the required modules:
+```npm install```
 
-2. Встановити  потрібні мождулі:
-   ```npm install```
+3. Run the project:
 
-3. Запустити проєкт:
-
-   ```npm run start ```
+```npm run start ```
 
 
 
@@ -41,23 +41,24 @@
 
 ---
 
-## Структура проєкту
-- `public/` — статичні файли
-- `src/` — вихідний код
-  - `app/` — загальні компоненти (Header, Footer, Layout, Main)
-  - `pages/` — сторінки застосунку (Home, About, NotFound)
-  - `hooks/` — кастомні хуки (наприклад, `usefetch.tsx`)
-  - `assets/` — зображення та інші ресурси
-  - `component/` — додаткові повторно використовувані компоненти
+## Project Structure
+- `public/` — static files
+- `src/` — source code
+- `app/` — common components (Header, Footer, Layout, Main)
+- `pages/` — application pages (Home, About, NotFound)
+- `hooks/` — custom hooks (e.g. `usefetch.tsx`)
+- `assets/` — images and other resources
+- `component/` — additional reusable components
 
 
 
 
 
 
-##  Хто створював
-- Ілля Епік — https://github.com/IllyaEpik
-- Ренат Белей — https://github.com/Renat19Belei
-- Попович Марк — https://github.com/markpopovich9
+## Who created
+- Ilya Epik — https://github.com/IllyaEpik
+- Popovich Mark — https://github.com/markpopovich9
+- Renat Belei — https://github.com/Renat19Belei
+
 
 
