@@ -1,4 +1,4 @@
-# Drones Shop — Інтернет-магазин дронів 
+# Drones Shop 
 
 **Brief description:**
 The project is an educational online drone store built on **React + TypeScript**.
@@ -58,7 +58,6 @@ The project is an educational online drone store built on **React + TypeScript**
 ## Who created
 - Ilya Epik — https://github.com/IllyaEpik
 - Popovich Mark — https://github.com/markpopovich9
-- Renat Belei — https://github.com/Renat19Belei
 
 
 
