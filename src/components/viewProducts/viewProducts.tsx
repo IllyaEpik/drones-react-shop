@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useProduct } from "../../hooks/useProduct";
-import { SVG } from "../../shared/Images";
+import { SVG } from "../../shared/images";
 import type { IProduct } from "../../shared/types";
-import styles from "./ViewProducts.module.css";
+import styles from "./viewProducts.module.css";
 import { useNavigate } from "react-router-dom";
 import { useBasketContext } from "../../context";
 import type { IProps } from "./ViewProductsTypes";

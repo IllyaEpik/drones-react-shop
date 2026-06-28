@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 import { useMediaQuery } from "react-responsive";
 // import Human from '../../assets/human.svg'
 
-import type{ IProbs } from "./HeaderTypes";
+import type{ IProbs } from "./headerTypes";
 import { SVG } from "../../shared";
 import { HeaderContext, useBasketContext } from "../../context";
 import { useUserContext } from "../../context/useUserContext";

@@ -1,5 +1,5 @@
 
 export * from "./types";
-export { Message } from "./Message";
-export { Button } from "./Button";
-export * from "./Images";
+export { Message } from "./message";
+export { Button } from "./button";
+export * from "./images";

@@ -3,8 +3,8 @@ import { Footer } from "../Footer";
 import { Header } from "../Header";
 import { Main } from "../Main";
 
-import type{ IProbs } from "./LayoutTypes";
-import styles from "./Layout.module.css";
+import type{ IProbs } from "./layoutTypes";
+import styles from "./layout.module.css";
 import { useEffect, useState } from "react";
 import { Modal } from "../../components/Modal";
 import { Input } from "../../components/Input";

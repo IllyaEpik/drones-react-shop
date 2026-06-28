@@ -1,6 +1,6 @@
-import type{ IProbs } from "./CardTypes";
+import type{ IProbs } from "./cardTypes";
 import {SVG } from "../../shared";
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 import { useMediaQuery } from "react-responsive";
 
 export function Card(probs: IProbs) {

@@ -2,12 +2,12 @@
 import { useContext, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useParams } from "react-router-dom";
-import { ViewProducts } from "../../components/ViewProducts";
+import { ViewProducts } from "../../components/viewProducts";
 import { HeaderContext, useBasketContext } from "../../context";
 import { useIdProduct } from "../../hooks/useIdProduct";
 import { Button } from "../../shared";
-import { BETA, SVG } from "../../shared";
-import styles from "./Product.module.css";
+import { BETA, SVG } from "../../shared/images";
+import styles from "./product.module.css";
 
 export function Product(){
 	const isTabletOrMobile = useMediaQuery({ query: "(max-width: 950px)" });

@@ -1,4 +1,4 @@
-import type{ IProbs } from "./MaInTypes";
+import type{ IProbs } from "./maInTypes";
 import styles from "./Main.module.css";
 
 export function Main(probs: IProbs) {

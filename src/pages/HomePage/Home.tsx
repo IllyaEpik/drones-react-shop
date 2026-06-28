@@ -11,8 +11,8 @@
 
 // >>>>>>> origin/Contact
 
-import { ViewProducts } from "../../components/ViewProducts";
-import { Card } from "../../components/Card/Card";
+import { ViewProducts } from "../../components/viewProducts";
+import { Card } from "../../components/card";
 import { SVG,Blocks } from "../../shared";
 import styles from "./Home.module.css";
 import { useMediaQuery } from "react-responsive";

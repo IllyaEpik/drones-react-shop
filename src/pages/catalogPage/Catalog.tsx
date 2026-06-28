@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { ViewProducts } from "../../components/ViewProducts";
+import { ViewProducts } from "../../components/viewProducts";
 import { useCountProduct } from "../../hooks";
-import { BETA, SVG } from "../../shared";
+import { BETA, SVG } from "../../shared/images";
 import styles from "./Catalog.module.css";
 
 export function Catalog() {

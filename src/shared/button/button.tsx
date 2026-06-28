@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { SVG } from "..";
-import styles from "./Button.module.css";
-import type{ IProbs } from "./ButtonTypes";
+import styles from "./button.module.css";
+import type{ IProbs } from "./buttonTypes";
 
 export function Button(probs:IProbs) {
     const {

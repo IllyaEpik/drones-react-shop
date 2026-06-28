@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { About } from "../pages/AboutPage";
 import { Auth } from "../pages/AuthPage/Auth"
-import { Catalog } from "../pages/CatalogPage";
+import { Catalog } from "../pages/catalogPage";
 import { Home } from "../pages/HomePage";
 import { NotFound } from "../pages/NotFound";
-import { Product } from "../pages/ProductPage";
+import { Product } from "../pages/productPage";
 import { ResetPassword } from "../pages/ResetPsswordPage/ResetPassword";
 import { Layout } from "./Layout";
 import { Profile } from "../pages/ProfilePage";
@@ -38,7 +38,7 @@ export function AppRoutes() {
 			<Route path="/checkout" element={<Checkout />} />
 			
 			
-		</Route>
+		</Route> 
 
       </Routes> 
 	  
